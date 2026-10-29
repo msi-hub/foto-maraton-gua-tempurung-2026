@@ -1,0 +1,2186 @@
+<!DOCTYPE html>
+<html lang="ms" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto Maraton Gua Tempurung 2026 | Kerjasama KPTM Ipoh & Maju Perak</title>
+    <link rel="icon" href="assets/Favicon Photo Maraton Gua Tempurung.png" type="image/png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bs-body-font-family: 'Inter', sans-serif;
+            --font-heading: 'Montserrat', sans-serif;
+            --accent-amber: #f59e0b;
+            --accent-emerald: #307674;
+            --accent-sky: #0284c7;
+        }
+
+        body {
+            background-color: #090d16;
+            color: #f1f5f9;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-heading {
+            font-family: var(--font-heading);
+        }
+
+        /* Gradient & Accent Color Overrides */
+        .text-amber {
+            color: var(--accent-amber) !important;
+        }
+
+        .text-emerald {
+            color: var(--accent-emerald) !important;
+        }
+
+        .text-sky {
+            color: var(--accent-sky) !important;
+        }
+
+        .bg-amber {
+            background-color: var(--accent-amber) !important;
+        }
+
+        .bg-emerald {
+            background-color: var(--accent-emerald) !important;
+        }
+
+        .bg-sky {
+            background-color: var(--accent-sky) !important;
+        }
+
+        .border-amber {
+            border-color: var(--accent-amber) !important;
+        }
+
+        .border-emerald {
+            border-color: var(--accent-emerald) !important;
+        }
+
+        .border-sky {
+            border-color: var(--accent-sky) !important;
+        }
+
+        .gradient-maraton {
+            background: linear-gradient(135deg, #000000 0%, #154442 50%, #845401 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #307674 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+
+        /* Hero Section Styling */
+        .hero-section {
+            padding-top: 140px;
+            padding-bottom: 90px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(9, 13, 22, 0.85) 0%, rgba(9, 13, 22, 1) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Hero Section Styling */
+        .hero-section {
+            padding-top: 160px;
+            padding-bottom: 90px;
+            background: linear-gradient(to bottom, rgba(9, 13, 22, 0.8), rgba(9, 13, 22, 0.98)),
+                url('assets/Gua Tempurung.jpg') center/cover no-repeat;
+        }
+
+        .btn-amber {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #090d16;
+            font-weight: 700;
+            border: none;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-amber:hover {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.45);
+        }
+
+        .agency-pill {
+            background: rgba(19, 27, 46, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+
+        .agency-pill:hover {
+            border-color: var(--accent-amber);
+            transform: translateY(-3px);
+        }
+
+        .nav-link:hover {
+            color: var(--accent-amber);
+        }
+
+        .gallery-card {
+            overflow: hidden;
+            border-radius: 1rem;
+            position: relative;
+        }
+
+        .gallery-card img {
+            transition: transform 0.5s ease;
+            height: auto;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(9, 13, 22, 0.95), transparent 70%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.25rem;
+        }
+
+        .custom-card {
+            background-color: #131b2e;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .custom-card:hover {
+            border-color: rgba(245, 158, 11, 0.5);
+            transform: translateY(-4px);
+        }
+
+        /* Accordion Dark Custom */
+        .accordion-item {
+            background-color: #131b2e;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem !important;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            background-color: #131b2e;
+            color: #fff;
+            font-weight: 600;
+            box-shadow: none !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(245, 158, 11, 0.1);
+            color: var(--accent-amber);
+        }
+
+        .accordion-button::after {
+            filter: invert(1);
+        }
+
+        .audience-card {
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 1rem;
+            transition: transform 0.3s ease, border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(245, 158, 11, 0.65);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .audience-card-featured {
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        .audience-card-featured:hover {
+            border-color: rgba(16, 185, 129, 0.85);
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.1);
+        }
+
+        .audience-number {
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            font-family: var(--bs-font-sans-serif);
+            font-size: 0.8rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        .audience-icon {
+            width: 82px;
+            height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1.5rem;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            font-size: 2.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .audience-icon-emerald {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .audience-icon-info {
+            background: rgba(6, 182, 212, 0.1);
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+
+        .audience-card:hover .audience-icon {
+            transform: scale(1.08) rotate(-3deg);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .audience-card,
+            .audience-icon {
+                transition: none;
+            }
+
+            .audience-card:hover {
+                transform: none;
+            }
+        }
+
+        .fmgt-logo {
+            width: 200px;
+        }
+
+        .registration-card {
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 1rem;
+            transition: transform 0.3s ease, border-color 0.3s ease,
+                box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .registration-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(245, 158, 11, 0.65);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .registration-card-featured {
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        .registration-card-featured:hover {
+            border-color: rgba(16, 185, 129, 0.8);
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.1);
+        }
+
+        .registration-number {
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            font-size: 0.8rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .registration-icon {
+            width: 76px;
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1.4rem;
+            font-size: 2.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-school {
+            color: #06b6d4;
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+
+        .icon-ipt {
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .icon-public {
+            color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .registration-card:hover .registration-icon {
+            transform: scale(1.08) rotate(-3deg);
+        }
+
+        .registration-price {
+            padding: 1rem;
+            border-radius: 0.8rem;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .registration-price span {
+            font-size: 1.8rem;
+            line-height: 1.3;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .registration-card,
+            .registration-icon {
+                transition: none;
+            }
+
+            .registration-card:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BOOTSTRAP NAVBAR -->
+    <nav
+        class="navbar navbar-expand-lg navbar-dark gradient-maraton bg-opacity-95 fixed-top border-bottom border-secondary-subtle backdrop-blur">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="assets/Logo Foto Maraton Gua Tempurung.png" class="fmgt-logo" style="">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium fs-7 gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="#pengenalan">Pengenalan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hadiah">Hadiah</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tentatif">Tentatif</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#panduan">Panduan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                </ul>
+
+                <a href="#pendaftaran" class="btn btn-amber px-4 py-2 rounded-3 fs-7">
+                    <i class="fa-solid fa-pen-to-square me-1"></i> Daftar Sekarang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section text-center position-relative">
+        <!-- Video Background -->
+        <!-- <video class="hero-video-bg" autoplay loop muted playsinline
+            poster="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1920&q=80">
+            <source src="https://gua-tempurung.com/storage/hero/2026/10/lB5iTXrWaUjbdtQW0iT2zLSuAyY8aHu1sIy3z93o.mp4"
+                type="video/mp4">
+        </video> -->
+        <!-- Overlay for contrast -->
+        <!-- <div class="hero-overlay"></div> -->
+        <div class="container hero-content">
+            <!-- Ruang Logo Agensi / Rakan Strategik -->
+            <div class="mb-2">
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo KPTM.png" width="150">
+                    </div>
+                </div>
+            </div>
+            <!-- Ruang Logo Agensi / Rakan Strategik -->
+            <div class="mb-4">
+                <div class="text-capitalize text-white small fs-9 mb-2 letter-spacing-1">
+                    Dengan Kerjasama
+                </div>
+                <div class="d-flex flex-wrap justify-content-center gap-2 w-100">
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo Maju Perak.png" width="170">
+                    </div>
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo Gua Tempurung.png" width="170">
+                    </div>
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo KBS.png" width="80">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audience Badge -->
+            <div
+                class="d-inline-flex bg-dark border border-warning-subtle text-white rounded-pill px-3 py-2 mb-3 fw-semibold fs-3 fs-xs-5">
+                PERTANDINGAN RAKAN MUDA
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="display-4 fw-black mb-3 text-white text-uppercase font-heading mt-2">
+                <span class="gradient-text">FOTO MARATON GUA TEMPURUNG 2026</span>
+            </h1>
+
+            <p class="lead text-secondary max-width-700 mx-auto mb-4 fs-6">
+                Abadikan keajaiban struktur batu kapur purba, stalaktit bercahaya, dan aksi lensa paling dramatik dalam
+                foto maraton terbesar di Gopeng, Perak!
+            </p>
+
+            <!-- Event Highlight Pills -->
+            <div class="row g-2 d-flex align-items-center justify-content-center mb-4 max-width-900 mx-auto">
+                <div class="col-12 col-md-4">
+                    <div class="p-3 custom-card d-flex align-items-center gap-3 text-start">
+                        <i class="fa-solid fa-calendar-day fs-3 text-amber"></i>
+                        <div>
+                            <div class="text-secondary fs-8">Tarikh Acara</div>
+                            <div class="fw-bold text-white fs-7">5 Disember 2026 (Sabtu)</div>
+                            <small>Pendaftaran sebelum: 3 Disember 2026 (Khamis)</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="p-3 custom-card d-flex align-items-center gap-3 text-start">
+                        <i class="fa-solid fa-location-dot fs-3 text-emerald"></i>
+                        <div>
+                            <div class="text-secondary fs-8">Lokasi Pertandingan</div>
+                            <div class="fw-bold text-white fs-7">Gua Tempurung, Perak</div>
+                            <small>Gua batu kapur terbesar & terpanjang di Semenanjung Malaysia</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="p-3 custom-card d-flex align-items-center gap-3 text-start">
+                        <i class="fa-solid fa-trophy fs-3 text-amber"></i>
+                        <div>
+                            <div class="text-secondary fs-8">Jumlah Hadiah</div>
+                            <div class="fw-bold text-white fs-7">RM 3,800 & Sijil</div>
+                            <small>Foto Maraton & Malaysia Book of Record (MBoR)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="d-flex justify-content-center gap-3 mb-5 flex-wrap">
+                <a href="#pendaftaran" class="btn btn-amber btn-lg px-4 fs-6"><i class="fa-solid fa-bolt me-1"></i>
+                    Daftar Penyertaan Sekarang</a>
+                <a href="#pengenalan" class="btn btn-outline-light btn-lg px-4 fs-6"><i
+                        class="fa-solid fa-circle-info me-1"></i> Maklumat Lanjut</a>
+            </div>
+
+            <!-- COUNTDOWN TIMER & PROGRESS CARD -->
+            <div class="custom-card p-4 mx-auto" style="max-width: 750px;">
+                <div class="d-flex justify-content-between align-items-center mb-2 fs-7 fw-bold">
+                    <div class="text-start">
+                        <div class="fw-black lh-1 font-heading text-white fs-6">FOTO MARATON
+                            GUA TEMPURUNG '26</div>
+                        <div class="text-amber fw-bold" style="font-size: 0.65rem; letter-spacing: 0.5px;">GARIS MASA KE
+                            TARIKH MARATON</div>
+                    </div>
+                    <div class="bg-amber text-dark rounded-3 d-flex align-items-center justify-content-center"
+                        style="width: 40px; height: 40px;">
+                        <i class="fa-solid fa-camera fs-5"></i>
+                    </div>
+                </div>
+
+                <div class="progress mb-4" style="height: 10px; background-color: rgba(255,255,255,0.1);">
+                    <div class="progress-bar bg-amber progress-bar-striped progress-bar-animated" id="progressBar"
+                        role="progressbar" style="width: 71%;"></div>
+                </div>
+
+                <div class="row g-2 text-center" id="countdownGrid">
+                    <div class="col-3">
+                        <div class="bg-dark bg-opacity-75 border border-secondary border-opacity-50 rounded-3 p-2">
+                            <span class="display-6 fw-bold text-amber d-block font-heading" id="timerDays">00</span>
+                            <span class="text-secondary fs-8 text-uppercase fw-semibold">Hari</span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="bg-dark bg-opacity-75 border border-secondary border-opacity-50 rounded-3 p-2">
+                            <span class="display-6 fw-bold text-amber d-block font-heading" id="timerHours">00</span>
+                            <span class="text-secondary fs-8 text-uppercase fw-semibold">Jam</span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="bg-dark bg-opacity-75 border border-secondary border-opacity-50 rounded-3 p-2">
+                            <span class="display-6 fw-bold text-amber d-block font-heading" id="timerMinutes">00</span>
+                            <span class="text-secondary fs-8 text-uppercase fw-semibold">Minit</span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="bg-dark bg-opacity-75 border border-secondary border-opacity-50 rounded-3 p-2">
+                            <span class="display-6 fw-bold text-amber d-block font-heading" id="timerSeconds">00</span>
+                            <span class="text-secondary fs-8 text-uppercase fw-semibold">Saat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TARGET AUDIENCE SECTION -->
+
+    <!-- SPONSOR SHOWCASE SECTION -->
+    <section id="penaja" class="d-none py-5 gradient-maraton border-top border-bottom border-secondary-subtle">
+        <div class="container py-3 text-center">
+
+            <!-- Section Heading -->
+            <span
+                class="badge bg-amber bg-opacity-10 text-dark border border-warning-subtle rounded-pill px-3 py-2 mb-3 fw-bold fs-8">
+                <i class="fa-solid fa-handshake me-1"></i> RAKAN STRATEGIK
+            </span>
+
+            <h2 class="fw-black text-white mb-2 font-heading">
+                PENGHARGAAN <span class="text-amber">PENAJA</span>
+            </h2>
+
+            <p class="text-secondary mb-5 mx-auto" style="max-width: 650px;">
+                Setinggi-tinggi penghargaan kepada semua penaja dan rakan strategik
+                yang menyokong penganjuran Pertandingan Rakan Muda Foto Maraton
+                Gua Tempurung 2026.
+            </p>
+
+            <!-- Main Sponsor -->
+            <div class="mb-5">
+                <span class="text-amber fw-bold fs-8 d-block mb-3">
+                    <i class="fa-solid fa-crown me-1"></i> PENAJA UTAMA
+                </span>
+
+                <div class="custom-card p-4 p-md-5 mx-auto d-flex align-items-center justify-content-center"
+                    style="max-width: 850px; min-height: 220px;">
+
+                    <img src="assets/logos/penaja-utama.png" alt="Logo Penaja Utama" class="img-fluid"
+                        style="max-height: 130px; max-width: 100%; object-fit: contain;">
+                </div>
+            </div>
+
+            <!-- Supporting Sponsors -->
+            <div class="mb-4">
+                <span class="text-secondary fw-bold fs-8 d-block mb-4">
+                    <i class="fa-solid fa-award me-1"></i> PENAJA & RAKAN STRATEGIK
+                </span>
+
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center">
+
+                    <!-- Sponsor 01 -->
+                    <div class="col">
+                        <div class="custom-card p-3 h-100 d-flex align-items-center justify-content-center"
+                            style="min-height: 150px;">
+                            <img src="assets/logos/penaja-01.png" alt="Logo Penaja 1" class="img-fluid"
+                                style="max-height: 85px; max-width: 100%; object-fit: contain;">
+                        </div>
+                    </div>
+
+                    <!-- Sponsor 02 -->
+                    <div class="col">
+                        <div class="custom-card p-3 h-100 d-flex align-items-center justify-content-center"
+                            style="min-height: 150px;">
+                            <img src="assets/logos/penaja-02.png" alt="Logo Penaja 2" class="img-fluid"
+                                style="max-height: 85px; max-width: 100%; object-fit: contain;">
+                        </div>
+                    </div>
+
+                    <!-- Sponsor 03 -->
+                    <div class="col">
+                        <div class="custom-card p-3 h-100 d-flex align-items-center justify-content-center"
+                            style="min-height: 150px;">
+                            <img src="assets/logos/penaja-03.png" alt="Logo Penaja 3" class="img-fluid"
+                                style="max-height: 85px; max-width: 100%; object-fit: contain;">
+                        </div>
+                    </div>
+
+                    <!-- Sponsor 04 -->
+                    <div class="col">
+                        <div class="custom-card p-3 h-100 d-flex align-items-center justify-content-center"
+                            style="min-height: 150px;">
+                            <img src="assets/logos/penaja-04.png" alt="Logo Penaja 4" class="img-fluid"
+                                style="max-height: 85px; max-width: 100%; object-fit: contain;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bottom Highlight -->
+            <div
+                class="mt-5 d-inline-flex align-items-center gap-3 px-4 py-3 rounded-pill border border-warning-subtle bg-amber bg-opacity-10">
+                <i class="fa-solid fa-heart text-amber fs-4"></i>
+                <div class="text-start">
+                    <strong class="d-block text-white fs-7">
+                        Terima kasih atas sokongan anda.
+                    </strong>
+                    <small class="text-secondary">
+                        Bersama meraikan kreativiti dan keindahan alam melalui fotografi.
+                    </small>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- INTRODUCTION SECTION -->
+    <section id="pengenalan" class="py-5">
+        <div class="container py-4">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <span
+                        class="badge bg-amber bg-opacity-10 text-dark border border-warning-subtle rounded-pill px-3 py-2 mb-2 fw-bold fs-8">PENGENALAN
+                        PROGRAM</span>
+                    <h2 class="fw-extrabold text-white mb-3 display-6 font-heading">Eksplorasi Lensa & Cabaran Estetika
+                        Gua Tempurung</h2>
+                    <p class="text-secondary mb-3">
+                        <strong>Pertandingan Rakan Muda Foto Maraton Gua Tempurung 2026</strong> merupakan inisiatif di
+                        bawah kerjasama KPTM Ipoh dan Maju Perak. Pertandingan fotografi berdurasi 4 jam ini mencabar
+                        daya kreativiti, kepantasan komposisi, serta ketahanan fizikal peserta.
+                    </p>
+                    <p class="text-secondary mb-4">
+                        Setiap peserta akan meneroka keunikan binaan batu kapur purba, stalaktit bercahaya, serta
+                        permainan pencahayaan di dalam kubah Gua Tempurung.
+                    </p>
+
+                    <ul class="list-unstyled d-flex flex-column gap-2 fw-medium text-light">
+                        <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-circle-check text-amber"></i>
+                            Terbuka untuk peranti DSLR, Mirrorless & Telefon Pintar</li>
+                        <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-circle-check text-amber"></i>
+                            Sijil Penglibatan Rakan Muda Peringkat Kebangsaan</li>
+                        <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-circle-check text-amber"></i>
+                            Sesi Perkongsian & Bengkel Tip Fotografi Eksklusif</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="assets/IN CAVE.jpeg" class="img-fluid rounded-4 border border-secondary shadow"
+                                alt="Gua Tempurung">
+                        </div>
+                        <div class="col-6 pt-4">
+                            <img src="assets/OUT CAVE.jpeg" class="img-fluid rounded-4 border border-secondary shadow"
+                                alt="Aktiviti Fotografi Gua">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CATEGORY & PRIZES SECTION -->
+    <section id="hadiah" class="py-5 gradient-maraton border-top border-bottom border-secondary-subtle">
+        <div class="container py-4 text-center">
+
+            <span
+                class="badge bg-warning bg-opacity-10 text-warning border border-warning-subtle rounded-pill px-3 py-2 mb-2 fw-bold fs-8">
+                KATEGORI & ANUGERAH
+            </span>
+
+            <h2 class="fw-black text-white mb-2 font-heading">Kategori Pertandingan & Hadiah</h2>
+
+            <p class="text-secondary mb-5 mx-auto max-width-600">
+                Tiga kategori pertandingan disediakan untuk meraikan kreativiti dan bakat fotografi mengikut kumpulan
+                peserta.
+            </p>
+
+            <div class="row g-4 text-start">
+
+                <!-- KATEGORI AWAM -->
+                <div class="col-md-4">
+                    <div class="custom-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="badge bg-warning text-dark fw-bold mb-3">
+                                <i class="fa-solid fa-camera-retro me-1"></i> KATEGORI AWAM
+                            </span>
+
+                            <h3 class="h4 font-heading text-white mb-2">Kategori Awam</h3>
+
+                            <p class="text-secondary fs-7 mb-4">
+                                Terbuka kepada orang awam, staf KPTM/IPT, jurufoto amatur berumur 18 tahun ke atas dan
+                                profesional.
+                            </p>
+                        </div>
+
+                        <div class="d-flex flex-column gap-2 mb-2">
+                            <div
+                                class="p-3 bg-dark bg-opacity-50 rounded-3 d-flex justify-content-between align-items-center border border-warning border-opacity-25">
+                                <span class="fw-bold text-warning"><i class="fa-solid fa-trophy me-2"></i> Johan</span>
+                                <span class="fw-black text-warning fs-5">RM 500 + Medal</span>
+                            </div>
+
+                            <div
+                                class="p-3 bg-dark bg-opacity-50 rounded-3 d-flex justify-content-between align-items-center border border-secondary border-opacity-25">
+                                <span class="fw-bold text-light"><i class="fa-solid fa-medal me-2"></i> Naib
+                                    Johan</span>
+                                <span class="fw-black text-white fs-5">RM 300 + Medal</span>
+                            </div>
+
+                            <div
+                                class="p-3 bg-dark bg-opacity-50 rounded-3 d-flex justify-content-between align-items-center border border-secondary border-opacity-25">
+                                <span class="fw-bold text-white"><i class="fa-solid fa-award me-2"></i> Ketiga</span>
+                                <span class="fw-black text-white fs-5">RM 200 + Medal</span>
+                            </div>
+
+                            <div
+                                class="p-3 bg-dark bg-opacity-50 rounded-3 d-flex justify-content-between align-items-center border border-secondary border-opacity-25">
+                                <span class="text-secondary fs-7">5× Saguhati</span>
+                                <span class="fw-bold text-white">RM 100/orang</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KATEGORI PELAJAR IPT -->
+                <div class="col-md-4">
+                    <div class="custom-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="badge bg-info text-dark fw-bold mb-3">
+                                <i class="fa-solid fa-graduation-cap me-1"></i> KATEGORI IPT
+                            </span>
+
+                            <h3 class="h4 font-heading text-white mb-2">Kategori Pelajar IPT</h3>
+
+                            <p class="text-secondary fs-7 mb-4">
+                                Khas untuk pelajar KPTM serta penuntut institusi pengajian tinggi awam dan swasta
+                                (IPTA/IPTS).
+                            </p>
+                        </div>
+
+                        <div class="d-flex flex-column gap-2 mb-2">
+                            <div
+                                class="p-3 bg-dark bg-opacity-50 rounded-3 d-flex justify-content-between align-items-center border border-info border-opacity-25">
+                                <span class="fw-bold text-warning"><i class="fa-solid fa-trophy me-2"></i> Johan</span>
+                                <span class="fw-black text-warning fs-5">RM 300 + Medal</span>
+                            </div>
+
+                            <div
+                                class="p-3 bg-dark bg-opacity-50 rounded-3 d-flex justify-content-between align-items-center border border-secondary border-opacity-25">
+                                <span class="fw-bold text-light"><i class="fa-solid fa-medal me-2"></i> Naib
+                                    Johan</span>
+                                <span class="fw-black text-white fs-5">RM 200 + Medal</span>
+                            </div>
+
+                            <div
+                                class="p-3 bg-dark bg-opacity-50 rounded-3 d-flex justify-content-between align-items-center border border-secondary border-opacity-25">
+                                <span class="fw-bold text-white"><i class="fa-solid fa-award me-2"></i> Ketiga</span>
+                                <span class="fw-black text-white fs-5">RM 100 + Medal</span>
+                            </div>
+
+                            <div
+                                class="p-3 bg-dark bg-opacity-50 rounded-3 d-flex justify-content-between align-items-center border border-secondary border-opacity-25">
+                                <span class="text-secondary fs-7">5× Saguhati</span>
+                                <span class="fw-bold text-white">RM 50/orang</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KATEGORI PELAJAR SEKOLAH MENENGAH -->
+                <div class="col-md-4">
+                    <div class="custom-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="badge bg-success text-white fw-bold mb-3">
+                                <i class="fa-solid fa-school me-1"></i> KATEGORI SEKOLAH
+                            </span>
+
+                            <h3 class="h4 font-heading text-white mb-2">Pelajar Sekolah Menengah</h3>
+
+                            <p class="text-secondary fs-7 mb-4">
+                                Terbuka kepada pelajar sekolah menengah berumur 13 hingga 17 tahun yang berminat dalam
+                                bidang fotografi.
+                            </p>
+                        </div>
+
+                        <div class="d-flex flex-column gap-2 mb-2">
+                            <div
+                                class="p-3 bg-dark bg-opacity-50 rounded-3 d-flex justify-content-between align-items-center border border-success border-opacity-25">
+                                <span class="fw-bold text-warning"><i class="fa-solid fa-trophy me-2"></i> Johan</span>
+                                <span class="fw-black text-warning fs-5">RM 300 + Trofi</span>
+                            </div>
+
+                            <div
+                                class="p-3 bg-dark bg-opacity-50 rounded-3 d-flex justify-content-between align-items-center border border-secondary border-opacity-25">
+                                <span class="fw-bold text-light"><i class="fa-solid fa-medal me-2"></i> Naib
+                                    Johan</span>
+                                <span class="fw-black text-white fs-5">RM 200 + Trofi</span>
+                            </div>
+
+                            <div
+                                class="p-3 bg-dark bg-opacity-50 rounded-3 d-flex justify-content-between align-items-center border border-secondary border-opacity-25">
+                                <span class="fw-bold text-white"><i class="fa-solid fa-award me-2"></i> Ketiga</span>
+                                <span class="fw-black text-white fs-5">RM 100 + Trofi</span>
+                            </div>
+
+                            <div
+                                class="p-3 bg-dark bg-opacity-50 rounded-3 d-flex justify-content-between align-items-center border border-secondary border-opacity-25">
+                                <span class="text-secondary fs-7">5× Saguhati</span>
+                                <span class="fw-bold text-white">RM 50/orang</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SCHEDULE / TENTATIF SECTION -->
+    <section id="tentatif" class="py-5 border-top border-bottom border-secondary-subtle">
+        <div class="container py-4">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+                <span
+                    class="badge bg-amber bg-opacity-10 text-dark border border-warning-subtle rounded-pill px-3 py-2 mb-2 fw-bold fs-8">
+                    <i class="fa-solid fa-calendar-days me-1"></i> JADUAL ACARA
+                </span>
+
+                <h2 class="fw-black text-white font-heading">
+                    Tentatif 5 Disember 2026 (Sabtu)
+                </h2>
+
+                <p class="text-secondary mt-2 mb-0">
+                    Pertandingan Rakan Muda Foto Maraton Gua Tempurung 2026
+                </p>
+            </div>
+
+            <div class="max-width-800 mx-auto d-flex flex-column gap-3">
+
+                <!-- 07:00 AM -->
+                <div class="p-3 custom-card d-flex flex-column flex-md-row align-items-start gap-3">
+                    <span class="badge bg-amber bg-opacity-20 text-dark p-2 px-3 fw-bold fs-7 rounded-3 text-nowrap">
+                        07:00 AM
+                    </span>
+
+                    <div class="flex-grow-1">
+                        <h5 class="text-white mb-2 fs-6 fw-bold">
+                            <i class="fa-solid fa-clipboard-check text-amber me-1"></i>
+                            Ketibaan Peserta & Pendaftaran
+                        </h5>
+                        <p class="text-secondary fs-7 mb-0">
+                            Pendaftaran dan urusan ketibaan peserta.
+                        </p>
+                        <small class="text-amber d-block mt-2">
+                            <i class="fa-solid fa-location-dot me-1"></i>
+                            Kedai A
+                        </small>
+                    </div>
+                </div>
+
+                <!-- 07:30 AM -->
+                <div class="p-3 custom-card d-flex flex-column flex-md-row align-items-start gap-3">
+                    <span class="badge bg-amber bg-opacity-20 text-dark p-2 px-3 fw-bold fs-7 rounded-3 text-nowrap">
+                        07:30 AM
+                    </span>
+
+                    <div class="flex-grow-1">
+                        <h5 class="text-white mb-2 fs-6 fw-bold">
+                            <i class="fa-solid fa-heart-pulse text-amber me-1"></i>
+                            Senaman Pound
+                        </h5>
+                        <small class="text-amber">
+                            <i class="fa-solid fa-location-dot me-1"></i>
+                            Tapak Briefing
+                        </small>
+                    </div>
+                </div>
+
+                <!-- 08:00 AM -->
+                <div class="p-3 custom-card d-flex flex-column flex-md-row align-items-start gap-3">
+                    <span class="badge bg-amber bg-opacity-20 text-dark p-2 px-3 fw-bold fs-7 rounded-3 text-nowrap">
+                        08:00 AM
+                    </span>
+
+                    <div class="flex-grow-1">
+                        <h5 class="text-white mb-2 fs-6 fw-bold">
+                            <i class="fa-solid fa-people-group text-amber me-1"></i>
+                            Perhimpunan & Taklimat Peserta
+                        </h5>
+
+                        <ul class="text-secondary fs-7 mb-2 ps-3">
+                            <li>Peserta berkumpul</li>
+                            <li>Taklimat berkenaan program</li>
+                            <li>Taklimat keselamatan</li>
+                        </ul>
+
+                        <small class="text-amber">
+                            <i class="fa-solid fa-location-dot me-1"></i>
+                            Khemah Utama
+                        </small>
+                    </div>
+                </div>
+
+                <!-- 09:00 AM -->
+                <div
+                    class="p-3 custom-card border-amber gradient-maraton bg-opacity-10 d-flex flex-column flex-md-row align-items-start gap-3">
+                    <span class="badge bg-amber text-dark p-2 px-3 fw-bold fs-7 rounded-3 text-nowrap">
+                        09:00 AM
+                    </span>
+
+                    <div class="flex-grow-1">
+                        <h5 class="text-white mb-2 fs-6 fw-bold">
+                            <i class="fa-solid fa-flag-checkered text-amber me-1"></i>
+                            Flag-off Foto Marathon
+                        </h5>
+
+                        <p class="text-secondary fs-7 mb-2">
+                            Pelepasan rasmi peserta untuk memulakan aktiviti fotografi.
+                        </p>
+
+                        <small class="text-amber">
+                            <i class="fa-solid fa-location-dot me-1"></i>
+                            Khemah Utama
+                        </small>
+                    </div>
+                </div>
+
+                <!-- 10:00 AM -->
+                <div class="p-3 custom-card d-flex flex-column flex-md-row align-items-start gap-3">
+                    <span class="badge bg-amber bg-opacity-20 text-dark p-2 px-3 fw-bold fs-7 rounded-3 text-nowrap">
+                        10:00 AM
+                    </span>
+
+                    <div class="flex-grow-1">
+                        <h5 class="text-white mb-2 fs-6 fw-bold">
+                            <i class="fa-solid fa-palette text-amber me-1"></i>
+                            Pertandingan Mewarna Bermula
+                        </h5>
+
+                        <small class="text-amber">
+                            <i class="fa-solid fa-location-dot me-1"></i>
+                            Dewan Terbuka
+                        </small>
+                    </div>
+                </div>
+
+                <!-- 12:30 PM -->
+                <div class="p-3 custom-card d-flex flex-column flex-md-row align-items-start gap-3">
+                    <span class="badge bg-amber bg-opacity-20 text-dark p-2 px-3 fw-bold fs-7 rounded-3 text-nowrap">
+                        12:30 PM
+                    </span>
+
+                    <div class="flex-grow-1">
+                        <h5 class="text-white mb-2 fs-6 fw-bold">
+                            <i class="fa-solid fa-flag text-amber me-1"></i>
+                            Penamat Foto Marathon & Pertandingan Mewarna
+                        </h5>
+
+                        <p class="text-secondary fs-7 mb-2">
+                            Aktiviti Foto Marathon dan pertandingan mewarna tamat.
+                        </p>
+
+                        <small class="text-amber">
+                            <i class="fa-solid fa-location-dot me-1"></i>
+                            Gua & Dewan Terbuka
+                        </small>
+                    </div>
+                </div>
+
+                <!-- 01:00 PM -->
+                <div class="p-3 custom-card d-flex flex-column flex-md-row align-items-start gap-3">
+                    <span class="badge bg-amber bg-opacity-20 text-dark p-2 px-3 fw-bold fs-7 rounded-3 text-nowrap">
+                        01:00 PM
+                    </span>
+
+                    <div class="flex-grow-1">
+                        <h5 class="text-white mb-2 fs-6 fw-bold">
+                            <i class="fa-solid fa-cloud-arrow-up text-amber me-1"></i>
+                            Penyerahan Hasil Foto
+                        </h5>
+
+                        <p class="text-secondary fs-7 mb-2">
+                            Peserta membuat submission gambar kepada urus setia.
+                        </p>
+
+                        <small class="text-amber">
+                            <i class="fa-solid fa-location-dot me-1"></i>
+                            Kedai A
+                        </small>
+                    </div>
+                </div>
+
+                <!-- 01:15 PM -->
+                <div class="p-3 custom-card d-flex flex-column flex-md-row align-items-start gap-3">
+                    <span class="badge bg-amber bg-opacity-20 text-dark p-2 px-3 fw-bold fs-7 rounded-3 text-nowrap">
+                        01:15 PM
+                    </span>
+
+                    <div class="flex-grow-1">
+                        <h5 class="text-white mb-2 fs-6 fw-bold">
+                            <i class="fa-solid fa-award text-amber me-1"></i>
+                            Penyampaian Hadiah Pertandingan Mewarna
+                        </h5>
+
+                        <small class="text-amber">
+                            <i class="fa-solid fa-location-dot me-1"></i>
+                            Khemah Utama
+                        </small>
+                    </div>
+                </div>
+
+                <!-- 01:30 PM -->
+                <div class="p-3 custom-card d-flex flex-column flex-md-row align-items-start gap-3">
+                    <span class="badge bg-amber bg-opacity-20 text-dark p-2 px-3 fw-bold fs-7 rounded-3 text-nowrap">
+                        01:30 PM
+                    </span>
+
+                    <div class="flex-grow-1">
+                        <h5 class="text-white mb-2 fs-6 fw-bold">
+                            <i class="fa-solid fa-images text-amber me-1"></i>
+                            Pengiraan Gambar & Penilaian Juri
+                        </h5>
+
+                        <ul class="text-secondary fs-7 mb-2 ps-3">
+                            <li>Pengiraan gambar oleh pihak MBOR</li>
+                            <li>Penilaian dan pengiraan markah oleh pihak juri</li>
+                        </ul>
+
+                        <small class="text-amber d-block">
+                            <i class="fa-solid fa-location-dot me-1"></i>
+                            Kedai A
+                        </small>
+
+                        <small class="text-secondary d-block mt-2">
+                            <i class="fa-solid fa-utensils me-1"></i>
+                            Makan tengah hari urus setia — Gua Tempurung
+                        </small>
+                    </div>
+                </div>
+
+                <!-- 02:30 PM -->
+                <div class="p-3 custom-card d-flex flex-column flex-md-row align-items-start gap-3">
+                    <span class="badge bg-amber bg-opacity-20 text-dark p-2 px-3 fw-bold fs-7 rounded-3 text-nowrap">
+                        02:30 PM
+                    </span>
+
+                    <div class="flex-grow-1">
+                        <h5 class="text-white mb-2 fs-6 fw-bold">
+                            <i class="fa-solid fa-user-tie text-amber me-1"></i>
+                            Ketibaan Tetamu VIP
+                        </h5>
+
+                        <small class="text-amber">
+                            <i class="fa-solid fa-location-dot me-1"></i>
+                            Khemah Utama
+                        </small>
+                    </div>
+                </div>
+
+                <!-- 02:45 PM -->
+                <div class="p-3 custom-card d-flex flex-column flex-md-row align-items-start gap-3">
+                    <span class="badge bg-amber bg-opacity-20 text-dark p-2 px-3 fw-bold fs-7 rounded-3 text-nowrap">
+                        02:45 PM
+                    </span>
+
+                    <div class="flex-grow-1">
+                        <h5 class="text-white mb-2 fs-6 fw-bold">
+                            <i class="fa-solid fa-star text-amber me-1"></i>
+                            Ketibaan Tetamu VVIP & Majlis Rasmi
+                        </h5>
+
+                        <ul class="text-secondary fs-7 mb-2 ps-3">
+                            <li>Nyanyian Lagu Negaraku dan Negeri Perak</li>
+                            <li>Bacaan doa</li>
+                            <li>Kata-kata aluan</li>
+                            <li>Ucapan CEO MHB</li>
+                            <li>Perasmian majlis dan gimik</li>
+                            <li>Penyampaian hadiah pertandingan mewarna</li>
+                            <li>Penyampaian hadiah Foto Marathon</li>
+                            <li>Minum petang bersama Menteri Besar Perak dan tetamu VIP</li>
+                        </ul>
+
+                        <small class="text-amber">
+                            <i class="fa-solid fa-location-dot me-1"></i>
+                            Khemah Utama
+                        </small>
+                    </div>
+                </div>
+
+                <!-- 05:30 PM -->
+                <div
+                    class="p-3 custom-card border-amber gradient-maraton bg-opacity-10 d-flex flex-column flex-md-row align-items-start gap-3">
+                    <span class="badge bg-amber text-dark p-2 px-3 fw-bold fs-7 rounded-3 text-nowrap">
+                        05:30 PM
+                    </span>
+
+                    <div class="flex-grow-1">
+                        <h5 class="text-white mb-1 fs-6 fw-bold">
+                            <i class="fa-solid fa-flag-checkered text-amber me-1"></i>
+                            Majlis Bersurai
+                        </h5>
+
+                        <p class="text-secondary fs-7 mb-0">
+                            Tamat program.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- GUIDE SECTION -->
+    <section id="panduan" class="py-5 gradient-maraton border-top border-bottom border-secondary-subtle">
+        <div class="container py-4">
+
+            <div class="text-center mb-5">
+                <span
+                    class="badge bg-amber bg-opacity-10 text-dark border border-warning-subtle rounded-pill px-3 py-2 mb-2 fw-bold fs-8">
+                    PANDUAN PERTANDINGAN
+                </span>
+
+                <h2 class="fw-black text-white mb-2 font-heading">
+                    Panduan & Peraturan Pertandingan
+                </h2>
+
+                <p class="text-secondary mb-0 mx-auto max-width-600">
+                    Pertandingan Rakan Muda Foto Maraton Gua Tempurung 2026.
+                    Fahami syarat penyertaan, peraturan fotografi dan langkah
+                    keselamatan sebelum menyertai pertandingan.
+                </p>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+
+                <!-- LEFT COLUMN: RULES -->
+                <div class="col-lg-7">
+                    <div class="custom-card p-4 h-100">
+
+                        <!-- 1. PARTICIPATION -->
+                        <div class="mb-4">
+                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                <i class="fa-solid fa-users text-amber"></i>
+                                1. Syarat Penyertaan
+                            </h4>
+
+                            <ul class="list-unstyled text-secondary fs-7 d-flex flex-column gap-2 mb-0">
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Penyertaan adalah secara individu dan PERCUMA.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Terbuka kepada tiga kategori: Pelajar Sekolah Menengah, Pelajar IPT dan
+                                        Terbuka.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Peserta wajib mendaftar lebih awal untuk mendapatkan No. ID Peserta.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Setiap peserta hanya boleh mendaftar dalam SATU kategori sahaja.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Setiap peserta hanya dibenarkan menghantar satu (1) keping foto akhir.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Foto yang sama tidak boleh dipertandingkan dalam kategori yang berbeza.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-ban text-danger mt-1"></i>
+                                    <span>Pendaftaran secara walk-in dan penggantian peserta tidak dibenarkan.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <hr class="border-secondary opacity-25">
+
+                        <!-- 2. PHOTO MARATHON -->
+                        <div class="mb-4">
+                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                <i class="fa-solid fa-camera text-amber"></i>
+                                2. Konsep & Tema Fotografi
+                            </h4>
+
+                            <div class="bg-dark bg-opacity-50 border border-warning-subtle rounded-3 p-3 mb-3">
+                                <small class="text-amber fw-bold d-block mb-1">TEMA RASMI</small>
+                                <h5 class="text-white fw-black font-heading mb-0">
+                                    KECANTIKAN ALAM DAN NILAI ESTETIKA
+                                </h5>
+                            </div>
+
+                            <ul class="list-unstyled text-secondary fs-7 d-flex flex-column gap-2 mb-0">
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Foto mesti diambil pada hari dan dalam tempoh pertandingan yang
+                                        ditetapkan.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Lokasi pengambilan foto adalah di Gua Tempurung dan kawasan yang ditetapkan
+                                        oleh penganjur.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Peserta hendaklah mematuhi masa mula, masa tamat dan tempoh penghantaran yang
+                                        diumumkan.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-ban text-danger mt-1"></i>
+                                    <span>Foto yang diambil sebelum pertandingan bermula tidak dibenarkan.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <hr class="border-secondary opacity-25">
+
+                        <!-- 3. EQUIPMENT -->
+                        <div class="mb-4">
+                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                <i class="fa-solid fa-camera-retro text-amber"></i>
+                                3. Peralatan Fotografi
+                            </h4>
+
+                            <p class="text-secondary fs-7 mb-3">
+                                Peserta dibenarkan menggunakan peralatan berikut:
+                            </p>
+
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-camera fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">DSLR / Mirrorless</strong>
+                                        <small class="text-secondary fs-8">Kamera profesional</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-camera-retro fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Kamera Digital</strong>
+                                        <small class="text-secondary fs-8">Kamera kompak</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-mobile-screen-button fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Telefon Pintar</strong>
+                                        <small class="text-secondary fs-8">Fotografi mudah alih</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-triangle-exclamation fs-3 text-danger mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Penggunaan Dron</strong>
+                                        <small class="text-secondary fs-8">Perlu kelulusan pihak berkuasa /
+                                            penganjur</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-secondary fs-8 mt-3 mb-0">
+                                Tripod, monopod dan aksesori fotografi lain dibenarkan
+                                tertakluk kepada peraturan keselamatan serta arahan
+                                pengurusan Gua Tempurung.
+                            </p>
+                        </div>
+
+                        <hr class="border-secondary opacity-25">
+
+                        <!-- 4. PHOTO EDITING -->
+                        <div class="mb-4">
+                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                <i class="fa-solid fa-sliders text-amber"></i>
+                                4. Pengubahsuaian Foto
+                            </h4>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div
+                                        class="bg-dark bg-opacity-50 border border-success border-opacity-25 rounded-3 p-3 h-100">
+                                        <h6 class="text-success fw-bold mb-3">
+                                            <i class="fa-solid fa-check-circle me-1"></i>
+                                            DIBENARKAN
+                                        </h6>
+
+                                        <ul class="text-secondary fs-7 ps-3 mb-0 d-flex flex-column gap-2">
+                                            <li>Crop / pemotongan imej</li>
+                                            <li>Brightness dan contrast</li>
+                                            <li>Exposure dan white balance</li>
+                                            <li>Colour adjustment dan saturation</li>
+                                            <li>Sharpening</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div
+                                        class="bg-dark bg-opacity-50 border border-danger border-opacity-25 rounded-3 p-3 h-100">
+                                        <h6 class="text-danger fw-bold mb-3">
+                                            <i class="fa-solid fa-ban me-1"></i>
+                                            TIDAK DIBENARKAN
+                                        </h6>
+
+                                        <ul class="text-secondary fs-7 ps-3 mb-0 d-flex flex-column gap-2">
+                                            <li>Menambah atau membuang objek utama daripada foto asal.</li>
+                                            <li>Menggabungkan beberapa foto menjadi satu imej.</li>
+                                            <li>Menggunakan AI generatif untuk menghasilkan atau mengubah kandungan
+                                                utama foto.</li>
+                                            <li>Menggunakan foto daripada internet atau milik orang lain.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="border-secondary opacity-25">
+
+                        <!-- 5. SUBMISSION -->
+                        <div class="mb-4">
+                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                <i class="fa-solid fa-cloud-arrow-up text-amber"></i>
+                                5. Penghantaran Penyertaan
+                            </h4>
+
+                            <ul class="list-unstyled text-secondary fs-7 d-flex flex-column gap-2 mb-0">
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-file-image text-amber mt-1"></i>
+                                    <span>Foto akhir hendaklah beresolusi tinggi dalam format JPEG.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-folder-open text-amber mt-1"></i>
+                                    <span>Muat naik foto ke dalam Google Drive yang ditetapkan mengikut No. ID
+                                        Peserta.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-clock text-amber mt-1"></i>
+                                    <span>Penghantaran hendaklah dibuat dalam tempoh yang ditetapkan oleh
+                                        penganjur.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <hr class="border-secondary opacity-25">
+
+                        <!-- 6. SAFETY -->
+                        <div class="mb-4">
+                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                <i class="fa-solid fa-shield-halved text-amber"></i>
+                                6. Keselamatan Peserta
+                            </h4>
+
+                            <div
+                                class="bg-danger bg-opacity-10 border border-danger border-opacity-25 rounded-3 p-3 mb-3">
+                                <strong class="text-white">
+                                    <i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>
+                                    Keselamatan ialah keutamaan.
+                                </strong>
+                                <p class="text-secondary fs-7 mt-2 mb-0">
+                                    Jangan mengambil risiko atau memasuki kawasan
+                                    berbahaya semata-mata untuk mendapatkan foto.
+                                </p>
+                            </div>
+
+                            <ul class="list-unstyled text-secondary fs-7 d-flex flex-column gap-2 mb-0">
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Patuhi arahan penganjur dan pengurusan Gua Tempurung pada setiap masa.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Gunakan laluan yang ditetapkan dan jangan memasuki kawasan larangan.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Pakai pakaian dan kasut yang sesuai serta mempunyai cengkaman yang
+                                        baik.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Jangan merosakkan batu, flora, fauna atau struktur gua dan jangan mengganggu
+                                        hidupan liar.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Peserta bertanggungjawab menjaga keselamatan peralatan fotografi
+                                        masing-masing.</span>
+                                </li>
+                            </ul>
+
+                            <p class="text-danger fw-bold fs-7 mt-3 mb-0">
+                                Penganjur berhak menghentikan penyertaan peserta
+                                yang melanggar peraturan keselamatan.
+                            </p>
+                        </div>
+
+                        <hr class="border-secondary opacity-25">
+
+                        <!-- 7. PHOTOGRAPHY ETHICS -->
+                        <div class="mb-4">
+                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                <i class="fa-solid fa-leaf text-amber"></i>
+                                7. Etika Fotografi
+                            </h4>
+
+                            <div class="row g-2">
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start gap-3 bg-dark bg-opacity-50 rounded-3 p-3">
+                                        <i class="fa-solid fa-tree text-success fs-5 mt-1"></i>
+                                        <div>
+                                            <strong class="text-white d-block fs-7">Lindungi Alam</strong>
+                                            <small class="text-secondary">Jangan merosakkan alam atau mengganggu flora
+                                                dan fauna demi mendapatkan gambar.</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start gap-3 bg-dark bg-opacity-50 rounded-3 p-3">
+                                        <i class="fa-solid fa-people-group text-amber fs-5 mt-1"></i>
+                                        <div>
+                                            <strong class="text-white d-block fs-7">Hormati Orang Lain</strong>
+                                            <small class="text-secondary">Hormati privasi pengunjung, peserta dan
+                                                petugas sepanjang pertandingan.</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start gap-3 bg-dark bg-opacity-50 rounded-3 p-3">
+                                        <i class="fa-solid fa-person-walking text-info fs-5 mt-1"></i>
+                                        <div>
+                                            <strong class="text-white d-block fs-7">Jaga Laluan</strong>
+                                            <small class="text-secondary">Jangan menghalang laluan atau membahayakan
+                                                orang lain ketika mengambil foto.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="border-secondary opacity-25">
+
+                        <!-- 8. ORGANISER RIGHTS -->
+                        <div class="mb-4">
+                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                <i class="fa-solid fa-scale-balanced text-amber"></i>
+                                8. Hak Penganjur
+                            </h4>
+
+                            <ul class="list-unstyled text-secondary fs-7 d-flex flex-column gap-2 mb-0">
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Penganjur berhak menolak penyertaan yang tidak memenuhi syarat dan peraturan
+                                        pertandingan.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Keputusan juri adalah muktamad.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Penganjur boleh menggunakan foto pemenang dan foto terpilih untuk promosi,
+                                        dokumentasi dan hebahan program dengan memberikan kredit kepada
+                                        jurugambar.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-check text-amber mt-1"></i>
+                                    <span>Hak cipta karya kekal milik peserta, tertakluk kepada terma penggunaan yang
+                                        ditetapkan oleh penganjur.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <hr class="border-secondary opacity-25">
+
+                        <!-- 9. DISQUALIFICATION -->
+                        <div>
+                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                <i class="fa-solid fa-ban text-danger"></i>
+                                9. Pembatalan Penyertaan
+                            </h4>
+
+                            <p class="text-secondary fs-7 mb-3">
+                                Penyertaan boleh dibatalkan sekiranya peserta:
+                            </p>
+
+                            <ul class="list-unstyled text-secondary fs-7 d-flex flex-column gap-2 mb-0">
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-xmark text-danger mt-1"></i>
+                                    <span>Menggunakan foto milik orang lain atau foto yang diambil sebelum
+                                        pertandingan.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-xmark text-danger mt-1"></i>
+                                    <span>Memalsukan maklumat pendaftaran atau penyertaan.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-xmark text-danger mt-1"></i>
+                                    <span>Menggunakan AI generatif atau manipulasi foto yang dilarang.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-xmark text-danger mt-1"></i>
+                                    <span>Melanggar peraturan keselamatan atau arahan pengurusan Gua Tempurung.</span>
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <i class="fa-solid fa-xmark text-danger mt-1"></i>
+                                    <span>Melakukan tindakan yang menjejaskan keselamatan atau reputasi program.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- FINAL REMINDER -->
+                        <div class="mt-4 p-3 rounded-3 border border-warning-subtle bg-amber bg-opacity-10">
+                            <p class="text-white fw-bold mb-1">
+                                <i class="fa-solid fa-circle-info text-dark me-2"></i>
+                                Peringatan kepada semua peserta
+                            </p>
+                            <p class="text-secondary fs-7 mb-0 text-dark">
+                                Pastikan anda telah mendaftar, menyimpan No. ID Peserta
+                                dan memahami semua peraturan sebelum memulakan
+                                pengembaraan fotografi anda.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: MAP & CHECKLIST -->
+                <div class="col-lg-5">
+                    <div class="d-flex flex-column gap-4 h-100">
+
+                        <!-- ADVENTURE MAP -->
+                        <div class="custom-card p-4">
+                            <h4 class="fw-black text-white mb-2 font-heading">
+                                <i class="fa-solid fa-map-location-dot text-amber me-2"></i>
+                                Peta Fotografi Gua Tempurung
+                            </h4>
+
+                            <p class="text-secondary fs-7 mb-3">
+                                Rujuk peta pengembaraan untuk mengenal pasti kawasan
+                                dan titik fotografi yang ditetapkan oleh penganjur.
+                            </p>
+                            <div class="gallery-card border border-secondary rounded-3 overflow-hidden mb-3">
+                                <img src="assets/Gua Tempurung Foto Maraton Fun Map.jpg"
+                                    alt="Peta pengembaraan dan titik fotografi Gua Tempurung" class="img-fluid w-100"
+                                    loading="lazy">
+                            </div>
+                            <h6 class="fw-black text-white mb-2 font-heading">
+                                <i class="fa-solid fa-map-pin text-amber me-2"></i>
+                                Check Point Dalam Gua Tempurung
+                            </h6>
+                            <div class="gallery-card border border-secondary rounded-3 overflow-hidden">
+                                <img src="assets/Gua Tempurung Foto Maraton Adventure Map.png"
+                                    alt="Peta pengembaraan dan titik fotografi Gua Tempurung" class="img-fluid w-100"
+                                    loading="lazy">
+                            </div>
+
+                            <p class="text-secondary fs-8 mt-3 mb-0">
+                                Sentiasa ikut laluan yang dibenarkan dan arahan
+                                petugas. Peta ini tidak menggantikan arahan
+                                keselamatan pihak pengurusan gua.
+                            </p>
+                        </div>
+
+
+                        <!-- PREPARATION CHECKLIST -->
+                        <div class="custom-card p-4 flex-grow-1">
+                            <h4 class="fw-black text-white mb-2 font-heading">
+                                <i class="fa-solid fa-list-check text-amber me-2"></i>
+                                Senarai Semak Peserta
+                            </h4>
+
+                            <p class="text-secondary fs-7 mb-4">
+                                Pastikan semua persediaan dan dokumen yang diperlukan telah lengkap
+                                sebelum menyertai Foto Maraton.
+                            </p>
+
+                            <div class="row g-3 text-center">
+
+                                <div class="col-6">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-id-card fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">No. ID Peserta</strong>
+                                        <small class="text-secondary fs-8">Daftar lebih awal</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-file-signature fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Borang Keizinan</strong>
+                                        <small class="text-secondary fs-8">Baca, fahami dan berikan persetujuan</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-camera fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Peralatan Kamera</strong>
+                                        <small class="text-secondary fs-8">Periksa bateri dan storan</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-shoe-prints fs-3 text-emerald mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Kasut Sesuai</strong>
+                                        <small class="text-secondary fs-8">Cengkaman yang baik</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-shirt fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Pakaian Sesuai</strong>
+                                        <small class="text-secondary fs-8">Selesa dan selamat</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-cloud-arrow-up fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Penghantaran Foto</strong>
+                                        <small class="text-secondary fs-8">JPEG melalui Drive</small>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- CONSENT REMINDER -->
+                            <div class="mt-4 p-3 rounded-3 border border-warning-subtle bg-amber bg-opacity-10">
+                                <p class="text-white fw-bold fs-7 mb-2">
+                                    <i class="fa-solid fa-file-circle-check text-dark me-2"></i>
+                                    Pengesahan Keizinan
+                                </p>
+
+                                <p class="text-secondary fs-7 mb-0 text-dark">
+                                    Semua peserta hendaklah membaca dan memahami terma serta syarat
+                                    pertandingan, termasuk peraturan keselamatan, penggunaan foto
+                                    untuk tujuan publisiti dan pengendalian data peribadi.
+                                    Peserta bawah 18 tahun hendaklah mendapatkan keizinan
+                                    ibu bapa atau penjaga mengikut ketetapan penganjur.
+                                </p>
+                            </div>
+    
+                            <div
+                                class="mt-3 p-3 rounded-3 bg-dark bg-opacity-50 border border-secondary border-opacity-25">
+                                <p class="text-white fw-bold fs-7 mb-2">
+                                    <i class="fa-solid fa-lightbulb text-amber me-2"></i>
+                                    Ingat!
+                                </p>
+
+                                <p class="text-secondary fs-7 mb-0">
+                                    Hasilkan foto yang kreatif dan asli. Utamakan keselamatan,
+                                    hargai alam semula jadi dan patuhi semua arahan pertandingan.
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- REGISTRATION STRUCTURE SECTION -->
+    <section id="pendaftaran" class="py-5 border-top border-bottom border-secondary-subtle">
+        <div class="container py-4 text-center">
+
+            <!-- Section Heading -->
+            <span
+                class="badge bg-amber bg-opacity-10 text-dark border border-warning-subtle rounded-pill px-3 py-2 mb-3 fw-bold fs-8">
+                <i class="fa-solid fa-clipboard-check me-1"></i>
+                PENDAFTARAN
+            </span>
+
+            <h2 class="fw-black text-white mb-2 font-heading">
+                PILIH KATEGORI ANDA
+            </h2>
+
+            <p class="text-secondary mb-5 mx-auto" style="max-width: 680px;">
+                Tiga kategori penyertaan untuk meraikan kreativiti dan bakat
+                fotografi. Pilih kategori yang bersesuaian dan sertai
+                pengalaman Foto Maraton Gua Tempurung 2026.
+            </p>
+
+            <div class="row g-4 justify-content-center text-start">
+
+                <!-- CATEGORY 01: SECONDARY SCHOOL -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="custom-card registration-card p-4 h-100 position-relative d-flex flex-column text-center">
+
+                        <span class="registration-number">01</span>
+
+                        <div class="registration-icon icon-school mx-auto mb-3">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+
+                        <span
+                            class="badge rounded-pill bg-info bg-opacity-10 text-white border border-info-subtle px-3 py-2 mb-3 mx-auto">
+                            KATEGORI A
+                        </span>
+
+                        <h3 class="h4 font-heading text-white fw-bold mb-2">
+                            Pelajar Sekolah Menengah
+                        </h3>
+
+                        <p class="text-secondary fs-8 mb-4">
+                            Untuk pelajar sekolah menengah yang berminat
+                            meneroka dunia fotografi, seni visual dan
+                            kreativiti melalui keindahan alam semula jadi.
+                        </p>
+
+                        <div class="registration-price mt-auto mb-4">
+                            <span class="d-block text-info fw-black font-heading">
+                                PERCUMA
+                            </span>
+                            <small class="text-secondary fs-8">
+                                Yuran penyertaan
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 02: IPT -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="custom-card registration-card registration-card-featured p-4 h-100 position-relative d-flex flex-column text-center">
+
+                        <span class="registration-number">02</span>
+
+                        <div class="registration-icon icon-ipt mx-auto mb-3">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <span
+                            class="badge rounded-pill bg-emerald bg-opacity-10 text-white border border-success-subtle px-3 py-2 mb-3 mx-auto">
+                            KATEGORI B
+                        </span>
+
+                        <h3 class="h4 font-heading text-white fw-bold mb-2">
+                            Pelajar IPT
+                        </h3>
+
+                        <p class="text-secondary fs-8 mb-4">
+                            Untuk pelajar institusi pengajian tinggi awam
+                            dan swasta, termasuk pelajar KPTM yang ingin
+                            mengetengahkan bakat dan perspektif fotografi.
+                        </p>
+
+                        <div class="registration-price mt-auto mb-4">
+                            <span class="d-block text-emerald fw-black font-heading">
+                                PERCUMA
+                            </span>
+                            <small class="text-secondary fs-8">
+                                Yuran penyertaan
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 03: PUBLIC -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="custom-card registration-card p-4 h-100 position-relative d-flex flex-column text-center">
+
+                        <span class="registration-number">03</span>
+
+                        <div class="registration-icon icon-public mx-auto mb-3">
+                            <i class="fa-solid fa-camera-retro"></i>
+                        </div>
+
+                        <span
+                            class="badge rounded-pill bg-amber bg-opacity-10 text-white border border-warning-subtle px-3 py-2 mb-3 mx-auto">
+                            KATEGORI C
+                        </span>
+
+                        <h3 class="h4 font-heading text-white fw-bold mb-2">
+                            Awam
+                        </h3>
+
+                        <p class="text-secondary fs-8 mb-4">
+                            Terbuka kepada orang awam, jurufoto bebas,
+                            peminat fotografi dan individu yang ingin
+                            berkongsi hasil karya kreatif mereka.
+                        </p>
+
+                        <div class="registration-price mt-auto mb-4">
+                            <span class="d-block text-amber fw-black font-heading">
+                                PERCUMA
+                            </span>
+                            <small class="text-secondary fs-8">
+                                Yuran penyertaan
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+             
+            <!-- Registration Reminder -->
+            <div class="mt-5 p-4 rounded-4 border border-warning-subtle bg-dark bg-opacity-10 text-center">
+                <i class="fa-solid fa-circle-info text-white fs-3 mb-2"></i>
+
+                <h5 class="text-amber fw-bold font-heading mb-2">
+                    Sebelum Anda Mendaftar
+                </h5>
+
+                <p class="text-white fs-7 mb-0 mx-auto" style="max-width: 750px;">
+                    Pastikan anda memilih kategori yang betul, melengkapkan
+                    maklumat pendaftaran dan membaca syarat serta peraturan
+                    Pertandingan Rakan Muda Foto Maraton Gua Tempurung 2026.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScKhqMwZUs38jqJkUpuL39E50V09x033CfKS1Yy3Hz8p7rl-Q/viewform?usp=dialog" target="_blank" class="btn btn-amber gradient-maraton px-5 py-3 mt-4 rounded-3 fs-5 w-100">
+                <i class="fa-solid fa-pen-to-square me-1"></i> Daftar Pertandingan Foto Maraton Gua Tempurung
+            </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FAQ SECTION WITH BOOTSTRAP ACCORDION -->
+    <section id="faq" class="py-5 gradient-maraton border-top border-bottom border-secondary-subtle">
+        <div class="container py-4">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+                <span
+                    class="badge bg-amber bg-opacity-10 text-dark border border-warning-subtle rounded-pill px-3 py-2 mb-2 fw-bold fs-8">
+                    <i class="fa-solid fa-circle-question me-1"></i>
+                    SOALAN LAZIM
+                </span>
+
+                <h2 class="fw-black text-white font-heading">
+                    Soalan Lazim (FAQ)
+                </h2>
+
+                <p class="text-secondary mx-auto mt-2" style="max-width: 600px;">
+                    Ketahui maklumat penting tentang penyertaan, hadiah dan perjalanan program.
+                </p>
+            </div>
+
+            <div class="accordion accordion-flush max-width-800 mx-auto" id="faqAccordion">
+
+                <!-- FAQ 1: TARIKH -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                            Bilakah pertandingan ini akan berlangsung?
+                        </button>
+                    </h2>
+
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary fs-7">
+                            Pertandingan Rakan Muda Foto Maraton Gua Tempurung 2026
+                            akan berlangsung pada <strong>14 November 2026 (Sabtu)</strong>.
+                            Pendaftaran peserta bermula pada jam <strong>7.00 pagi</strong>,
+                            manakala majlis dijadualkan bersurai pada jam <strong>5.30 petang</strong>.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2: LOKASI -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                            Di manakah pertandingan ini diadakan?
+                        </button>
+                    </h2>
+
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary fs-7">
+                            Program ini berlangsung di <strong>Gua Tempurung, Perak</strong>.
+                            Aktiviti pendaftaran dan penyerahan gambar dijadualkan di Kedai A,
+                            manakala taklimat dan majlis utama berlangsung di kawasan khemah utama.
+                            Pertandingan mewarna pula diadakan di dewan terbuka.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3: KATEGORI -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                            Siapakah yang boleh menyertai pertandingan ini?
+                        </button>
+                    </h2>
+
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary fs-7">
+                            Pertandingan ini mempunyai tiga kategori penyertaan:
+                            <ul class="mt-2 mb-0">
+                                <li><strong>Kategori Awam</strong> — untuk orang awam.</li>
+                                <li><strong>Kategori Pelajar IPT</strong> — untuk pelajar institusi pengajian tinggi.
+                                </li>
+                                <li><strong>Kategori Pelajar Sekolah Menengah</strong> — untuk pelajar sekolah menengah.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4: PENDAFTARAN -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                            Bilakah peserta perlu hadir untuk pendaftaran?
+                        </button>
+                    </h2>
+
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary fs-7">
+                            Peserta diminta hadir untuk pendaftaran pada jam
+                            <strong>7.00 pagi</strong> di <strong>Kedai A</strong>
+                            pada hari program. Peserta seterusnya akan mengikuti senaman pound
+                            pada jam 7.30 pagi dan taklimat program serta keselamatan pada jam 8.00 pagi.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5: PERANTI -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                            Bolehkah saya menggunakan telefon pintar untuk mengambil gambar?
+                        </button>
+                    </h2>
+
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary fs-7">
+                            Maklumat khusus tentang jenis kamera atau peranti yang dibenarkan
+                            perlu dirujuk kepada pihak penganjur. Sila pastikan peranti yang
+                            digunakan bersesuaian dengan syarat rasmi pertandingan.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6: FLAG-OFF -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                            Pukul berapakah Foto Marathon bermula?
+                        </button>
+                    </h2>
+
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary fs-7">
+                            Acara Foto Marathon dijadualkan bermula pada jam
+                            <strong>9.00 pagi</strong> melalui sesi flag-off di khemah utama.
+                            Aktiviti Foto Marathon dijadualkan tamat pada jam
+                            <strong>12.30 tengah hari</strong>.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 7: SUBMISSION -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                            Di manakah dan bilakah gambar perlu diserahkan?
+                        </button>
+                    </h2>
+
+                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary fs-7">
+                            Peserta perlu membuat penyerahan atau submission gambar pada jam
+                            <strong>1.00 petang</strong> di <strong>Kedai A</strong>.
+                            Sila ikuti arahan urus setia berkaitan kaedah dan syarat penyerahan gambar.
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- FAQ 12: PENGANGKUTAN -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq12" aria-expanded="false" aria-controls="faq12">
+                            Adakah pengangkutan ke Gua Tempurung disediakan?
+                        </button>
+                    </h2>
+
+                    <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary fs-7">
+                            Tiada. Peserta perlu merancang pengangkutan, tempat menginap dan
+                            masa perjalanan.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FAQ Footer -->
+            <div class="text-center mt-5">
+                <p class="text-secondary fs-7 mb-0">
+                    Masih mempunyai pertanyaan?
+                    <strong class="text-amber">Hubungi pihak penganjur</strong>
+                    untuk mendapatkan maklumat lanjut.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-5 border-top border-secondary-subtle fs-7 text-secondary">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <div class="fw-black text-white fs-6 mb-2 font-heading d-flex align-items-center gap-2">
+                        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                            <img src="assets/Logo Foto Maraton Gua Tempurung.png" class="w-50" style="">
+                        </a>
+                    </div>
+                    <p class="fs-8 mb-0">
+                        Anjuran kerjasama Kolej Poly-Tech MARA (KPTM) Ipoh & Maju Perak.
+                    </p>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 class="text-white fw-bold mb-2 font-heading">Hubungi Urusetia</h6>
+                    <p class="fs-8 mb-1 fw-bold"><i class="fa-solid fa-envelope text-amber me-1"></i>
+                        Pn. Nor Shahida</p>
+                    <p class="fs-8 mb-0"><i class="fa-solid fa-phone text-emerald me-1"></i> +60 17-536 2449</p>
+                    <p class="fs-8 mb-1 fw-bold"><i class="fa-solid fa-envelope text-amber me-1"></i>
+                        Pn. Nor Azreeyana</p>
+                    <p class="fs-8 mb-0"><i class="fa-solid fa-phone text-emerald me-1"></i> +60 19-571 3204</p>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 class="text-white fw-bold mb-2 font-heading">Lokasi Acara</h6>
+                    <p class="fs-8 mb-0"><i class="fa-solid fa-location-dot text-amber me-1"></i> Gua Tempurung National
+                        Heritage Park, 31600 Gopeng, Perak.</p>
+                </div>
+            </div>
+
+            <div class="text-center pt-3 border-top border-secondary border-opacity-25 fs-8">
+                © 2026 Pertandingan Rakan Muda Foto Maraton Gua Tempurung. Hak Cipta Terpelihara.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JQUERY & BOOTSTRAP JS BUNDLE -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // Countdown Timer Logic
+            const targetDate = new Date("December 5, 2026 08:00:00").getTime();
+            let days;
+            function updateTimer() {
+                const now = new Date().getTime();
+                const diff = targetDate - now;
+
+                if (diff > 0) {
+                    days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                    $('#timerDays').text(days < 10 ? '0' + days : days);
+                    $('#timerHours').text(hours < 10 ? '0' + hours : hours);
+                    $('#timerMinutes').text(minutes < 10 ? '0' + minutes : minutes);
+                    $('#timerSeconds').text(seconds < 10 ? '0' + seconds : seconds);
+                }
+            }
+
+            setInterval(updateTimer, 1000);
+            updateTimer();
+
+            // Smooth Scroll for Nav Links
+            $('a[href^="#"]').on('click', function (e) {
+                const target = $(this.getAttribute('href'));
+                if (target.length) {
+                    e.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 70
+                    }, 500);
+
+                    // Close mobile Bootstrap collapse menu if open
+                    $('.navbar-collapse').collapse('hide');
+                }
+            });
+
+            // Registration Form Logic with jQuery
+            let count = days;
+            const percent = Math.round(((365 - count) / 365) * 100);
+            $('#progressBar').css('width', percent + '%');
+
+        });
+    </script>
+</body>
+
+</html>
