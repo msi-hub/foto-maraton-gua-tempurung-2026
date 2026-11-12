@@ -387,6 +387,46 @@
                 transform: none;
             }
         }
+
+                /* MBOR Achievement Section Custom Styling */
+        .mbor-banner {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(19, 27, 46, 0.92) 50%, rgba(245, 158, 11, 0.08) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mbor-logo-ornament {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(9, 13, 22, 0.9) 75%);
+            border: 2px solid rgba(245, 158, 11, 0.6);
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.2), inset 0 0 15px rgba(245, 158, 11, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+        }
+
+        .mbor-logo-ornament::before {
+            content: "";
+            position: absolute;
+            inset: 6px;
+            border-radius: 50%;
+            border: 1px dashed rgba(251, 191, 36, 0.5);
+            pointer-events: none;
+        }
+
+        .mbor-ornament-corner {
+            position: absolute;
+            color: var(--accent-amber);
+            font-size: 0.75rem;
+            opacity: 0.85;
+        }
     </style>
 </head>
 
@@ -463,6 +503,12 @@
                         <img src="assets/Logo Maju Perak.png" width="170">
                     </div>
                     <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo SUK.png" width="90">
+                    </div>
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo MDK.png" width="90">
+                    </div>
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
                         <img src="assets/Logo Gua Tempurung.png" width="170">
                     </div>
                     <div class="px-2 py-2 d-flex align-items-center gap-2">
@@ -492,6 +538,9 @@
                     Dengan Sokongan
                 </div>
                 <div class="d-flex flex-wrap justify-content-center gap-2 w-100">
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo Tourism Perak.png" width="150">
+                    </div>
                     <div class="px-2 py-2 d-flex align-items-center gap-2">
                         <img src="assets/Logo Wonderful.png" width="150">
                     </div>
@@ -590,11 +639,61 @@
                     </div>
                 </div>
             </div>
+            <div class="mbor-banner rounded-4 p-4 mt-4 mx-auto" style="max-width: 750px;">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-4 text-center text-md-start">
+                    
+                    <!-- Ready Logo Placeholder with Gold Ornament -->
+                    <div class="flex-shrink-0 mx-auto mx-md-0">
+                        <div class="mbor-logo-ornament">
+                            <!-- Ornamental Accents -->
+                            <i class="fa-solid fa-star mbor-ornament-corner" style="top: -6px;"></i>
+                            <i class="fa-solid fa-star mbor-ornament-corner" style="bottom: -6px;"></i>
+                            <i class="fa-solid fa-diamond mbor-ornament-corner" style="left: -5px; font-size: 0.55rem;"></i>
+                            <i class="fa-solid fa-diamond mbor-ornament-corner" style="right: -5px; font-size: 0.55rem;"></i>
+                            
+                            <!-- Gantikan blok di bawah dengan tag <img> logo rasmi MBOR -->
+                            <div class="text-center">
+                                <div class="fw-black text-white font-heading lh-1" style="font-size: 0.7rem; letter-spacing: 1px;"><img src="assets/Logo MBOR.png" width="140"></div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Concise Content -->
+                    <div class="flex-grow-1">
+                        <div class="d-inline-flex align-items-center gap-2 text-amber fw-bold fs-8 text-uppercase mb-1">
+                            <i class="fa-solid fa-crown"></i> Pengiktirafan Kebangsaan
+                        </div>
+                        <h3 class="h4 fw-black text-white font-heading mb-2">
+                            Cubaan Rekod <span class="gradient-text">Malaysia Book of Records (MBOR)</span>
+                        </h3>
+                        <strong class="text-light">"MOST PHOTOGRAPHS CAPTURED IN A PHOTOGRAPHY MARATHON"</strong>
+                        <p class="text-secondary fs-7 mb-2">
+                            Misi mencipta sejarah bersama 300 jurufoto serentak.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                            <span class="badge bg-dark border border-warning border-opacity-50 text-amber fw-semibold px-3 py-1 rounded-pill fs-8">
+                                <i class="fa-solid fa-certificate me-1"></i> Sijil Pemegang Rekod Kebangsaan
+                            </span>
+                            <span class="badge bg-dark border border-secondary border-opacity-50 text-light fw-semibold px-3 py-1 rounded-pill fs-8">
+                                <i class="fa-solid fa-users me-1"></i> 300 Lensa Sejarah
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-4 w-100">
+                <div class="px-2 py-2 d-flex align-items-center gap-2">
+                    <img src="assets/Logo NLE30.png" width="220">
+                </div>
+                <div class="px-2 py-2 d-flex align-items-center gap-2">
+                    <img src="assets/Logo Perak Sejahtera.png" width="120">
+                </div>
+                <div class="px-2 py-2 d-flex align-items-center gap-2">
+                    <img src="assets/Logo Promising Perak.png" width="140">
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- TARGET AUDIENCE SECTION -->
 
     <!-- SPONSOR SHOWCASE SECTION -->
     <section id="penaja" class="d-none py-5 gradient-maraton border-top border-bottom border-secondary-subtle">
@@ -696,7 +795,7 @@
 
 
     <!-- INTRODUCTION SECTION -->
-    <section id="pengenalan" class="py-5">
+    <section id="pengenalan" class="pb-5">
         <div class="container py-4">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6">
@@ -721,7 +820,7 @@
                         <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-circle-check text-amber"></i>
                             Sijil Penglibatan Rakan Muda Peringkat Kebangsaan</li>
                         <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-circle-check text-amber"></i>
-                            Sesi Perkongsian & Bengkel Online Tip Fotografi Eksklusif Untuk Pelajar IPT.</li>
+                            Sesi Perkongsian & Bengkel Online Tip Fotografi Eksklusif Untuk Pelajar.</li>
                     </ul>
                 </div>
 
@@ -1276,7 +1375,7 @@
                             <div class="bg-dark bg-opacity-50 border border-warning-subtle rounded-3 p-3 mb-3">
                                 <small class="text-amber fw-bold d-block mb-1">TEMA RASMI</small>
                                 <h5 class="text-white fw-black font-heading mb-0">
-                                    KECANTIKAN ALAM DAN NILAI ESTETIKA
+                                    MERAKAM KEAJAIBAN GUA TEMPURUNG
                                 </h5>
                             </div>
 
@@ -2129,12 +2228,12 @@
                         </a>
                     </div>
                     <p class="fs-8 mb-0">
-                        Anjuran kerjasama Kolej Poly-Tech MARA (KPTM) Ipoh & Maju Perak.
+                        Anjuran Strategik Kolej Poly-Tech MARA (KPTM) Ipoh & Maju Perak.
                     </p>
                 </div>
 
                 <div class="col-lg-4">
-                    <h6 class="text-white fw-bold mb-2 font-heading">Hubungi Urusetia</h6>
+                    <h6 class="text-white fw-bold mb-2 font-heading">Urusetia Pertandingan Foto Maraton</h6>
                     <p class="fs-8 mb-1 fw-bold"><i class="fa-solid fa-envelope text-amber me-1"></i>
                         Pn. Nor Shahida</p>
                     <p class="fs-8 mb-0"><i class="fa-solid fa-phone text-emerald me-1"></i> +60 17-536 2449</p>
