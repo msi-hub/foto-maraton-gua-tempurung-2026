@@ -16,418 +16,8 @@
         rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
 
-    <style>
-        :root {
-            --bs-body-font-family: 'Inter', sans-serif;
-            --font-heading: 'Montserrat', sans-serif;
-            --accent-amber: #f59e0b;
-            --accent-emerald: #307674;
-            --accent-sky: #0284c7;
-        }
-
-        body {
-            background-color: #090d16;
-            color: #f1f5f9;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        .font-heading {
-            font-family: var(--font-heading);
-        }
-
-        /* Gradient & Accent Color Overrides */
-        .text-amber {
-            color: var(--accent-amber) !important;
-        }
-
-        .text-emerald {
-            color: var(--accent-emerald) !important;
-        }
-
-        .text-sky {
-            color: var(--accent-sky) !important;
-        }
-
-        .bg-amber {
-            background-color: var(--accent-amber) !important;
-        }
-
-        .bg-emerald {
-            background-color: var(--accent-emerald) !important;
-        }
-
-        .bg-sky {
-            background-color: var(--accent-sky) !important;
-        }
-
-        .border-amber {
-            border-color: var(--accent-amber) !important;
-        }
-
-        .border-emerald {
-            border-color: var(--accent-emerald) !important;
-        }
-
-        .border-sky {
-            border-color: var(--accent-sky) !important;
-        }
-
-        .gradient-maraton {
-            background: linear-gradient(135deg, #000000 0%, #154442 50%, #845401 100%);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #307674 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-
-
-        /* Hero Section Styling */
-        .hero-section {
-            padding-top: 140px;
-            padding-bottom: 90px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-video-bg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: 0;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, rgba(9, 13, 22, 0.85) 0%, rgba(9, 13, 22, 1) 100%);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Hero Section Styling */
-        .hero-section {
-            padding-top: 160px;
-            padding-bottom: 90px;
-            background: linear-gradient(to bottom, rgba(9, 13, 22, 0.8), rgba(9, 13, 22, 0.98)),
-                url('assets/Gua Tempurung.jpg') center/cover no-repeat;
-        }
-
-        .btn-amber {
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            color: #090d16;
-            font-weight: 700;
-            border: none;
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .btn-amber:hover {
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            color: #000;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.45);
-        }
-
-        .agency-pill {
-            background: rgba(19, 27, 46, 0.85);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(8px);
-            transition: all 0.3s ease;
-        }
-
-        .agency-pill:hover {
-            border-color: var(--accent-amber);
-            transform: translateY(-3px);
-        }
-
-        .nav-link:hover {
-            color: var(--accent-amber);
-        }
-
-        .gallery-card {
-            overflow: hidden;
-            border-radius: 1rem;
-            position: relative;
-        }
-
-        .gallery-card img {
-            transition: transform 0.5s ease;
-            height: auto;
-            object-fit: cover;
-            width: 100%;
-        }
-
-        .gallery-card:hover img {
-            transform: scale(1.08);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(9, 13, 22, 0.95), transparent 70%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 1.25rem;
-        }
-
-        .custom-card {
-            background-color: #131b2e;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .custom-card:hover {
-            border-color: rgba(245, 158, 11, 0.5);
-            transform: translateY(-4px);
-        }
-
-        /* Accordion Dark Custom */
-        .accordion-item {
-            background-color: #131b2e;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 0.75rem !important;
-            margin-bottom: 0.75rem;
-            overflow: hidden;
-        }
-
-        .accordion-button {
-            background-color: #131b2e;
-            color: #fff;
-            font-weight: 600;
-            box-shadow: none !important;
-        }
-
-        .accordion-button:not(.collapsed) {
-            background-color: rgba(245, 158, 11, 0.1);
-            color: var(--accent-amber);
-        }
-
-        .accordion-button::after {
-            filter: invert(1);
-        }
-
-        .audience-card {
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            border-radius: 1rem;
-            transition: transform 0.3s ease, border-color 0.3s ease,
-                box-shadow 0.3s ease;
-        }
-
-        .audience-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(245, 158, 11, 0.65);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-        }
-
-        .audience-card-featured {
-            border-color: rgba(16, 185, 129, 0.4);
-        }
-
-        .audience-card-featured:hover {
-            border-color: rgba(16, 185, 129, 0.85);
-            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.1);
-        }
-
-        .audience-number {
-            position: absolute;
-            top: 12px;
-            left: 16px;
-            font-family: var(--bs-font-sans-serif);
-            font-size: 0.8rem;
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.25);
-        }
-
-        .audience-icon {
-            width: 82px;
-            height: 82px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 1.5rem;
-            background: rgba(245, 158, 11, 0.1);
-            border: 1px solid rgba(245, 158, 11, 0.25);
-            font-size: 2.3rem;
-            transition: transform 0.3s ease;
-        }
-
-        .audience-icon-emerald {
-            background: rgba(16, 185, 129, 0.1);
-            border-color: rgba(16, 185, 129, 0.3);
-        }
-
-        .audience-icon-info {
-            background: rgba(6, 182, 212, 0.1);
-            border-color: rgba(6, 182, 212, 0.3);
-        }
-
-        .audience-card:hover .audience-icon {
-            transform: scale(1.08) rotate(-3deg);
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-
-            .audience-card,
-            .audience-icon {
-                transition: none;
-            }
-
-            .audience-card:hover {
-                transform: none;
-            }
-        }
-
-        .fmgt-logo {
-            width: 200px;
-        }
-
-        .registration-card {
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            border-radius: 1rem;
-            transition: transform 0.3s ease, border-color 0.3s ease,
-                box-shadow 0.3s ease;
-            overflow: hidden;
-        }
-
-        .registration-card:hover {
-            transform: translateY(-7px);
-            border-color: rgba(245, 158, 11, 0.65);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-        }
-
-        .registration-card-featured {
-            border-color: rgba(16, 185, 129, 0.4);
-        }
-
-        .registration-card-featured:hover {
-            border-color: rgba(16, 185, 129, 0.8);
-            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.1);
-        }
-
-        .registration-number {
-            position: absolute;
-            top: 12px;
-            left: 16px;
-            font-size: 0.8rem;
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.3);
-        }
-
-        .registration-icon {
-            width: 76px;
-            height: 76px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 1.4rem;
-            font-size: 2.1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .icon-school {
-            color: #06b6d4;
-            background: rgba(6, 182, 212, 0.1);
-            border: 1px solid rgba(6, 182, 212, 0.3);
-        }
-
-        .icon-ipt {
-            color: #10b981;
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-        }
-
-        .icon-public {
-            color: #f59e0b;
-            background: rgba(245, 158, 11, 0.1);
-            border: 1px solid rgba(245, 158, 11, 0.3);
-        }
-
-        .registration-card:hover .registration-icon {
-            transform: scale(1.08) rotate(-3deg);
-        }
-
-        .registration-price {
-            padding: 1rem;
-            border-radius: 0.8rem;
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .registration-price span {
-            font-size: 1.8rem;
-            line-height: 1.3;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-
-            .registration-card,
-            .registration-icon {
-                transition: none;
-            }
-
-            .registration-card:hover {
-                transform: none;
-            }
-        }
-
-                /* MBOR Achievement Section Custom Styling */
-        .mbor-banner {
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(19, 27, 46, 0.92) 50%, rgba(245, 158, 11, 0.08) 100%);
-            border: 1px solid rgba(245, 158, 11, 0.35);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .mbor-logo-ornament {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(9, 13, 22, 0.9) 75%);
-            border: 2px solid rgba(245, 158, 11, 0.6);
-            box-shadow: 0 0 25px rgba(245, 158, 11, 0.2), inset 0 0 15px rgba(245, 158, 11, 0.15);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-        }
-
-        .mbor-logo-ornament::before {
-            content: "";
-            position: absolute;
-            inset: 6px;
-            border-radius: 50%;
-            border: 1px dashed rgba(251, 191, 36, 0.5);
-            pointer-events: none;
-        }
-
-        .mbor-ornament-corner {
-            position: absolute;
-            color: var(--accent-amber);
-            font-size: 0.75rem;
-            opacity: 0.85;
-        }
-    </style>
 </head>
 
 <body>
@@ -478,79 +68,64 @@
             <div class="mb-2">
                 <div class="d-flex flex-wrap justify-content-center gap-2">
                     <div class="px-2 py-2 d-flex align-items-center gap-2">
-                        <img src="assets/Logo KPTM.png" width="150">
-                    </div>
-                    <div class="px-4 py-2 d-flex align-items-center gap-2">
-                        <img src="assets/Logo MARA.png" width="90">
+                        <img src="assets/Logo SUK.png" width="120">
                     </div>
                     <div class="px-2 py-2 d-flex align-items-center gap-2">
                         <img src="assets/Logo KKDW.png" width="150">
-                    </div>
-                    <div class="px-2 py-2 d-flex align-items-center gap-2">
-                        <img src="assets/Logo MARACorp.png" width="150">
-                    </div>
-                    <div class="px-2 py-2 d-flex align-items-center gap-2">
-                        <img src="assets/Logo UPTM.png" width="150">
-                    </div>
-                </div>
-            </div>
-            <!-- Ruang Logo Agensi / Rakan Strategik -->
-            <div class="mb-4">
-                <div class="text-capitalize text-secondary small fs-9 mb-2 letter-spacing-1">
-                    Dengan Kerjasama
-                </div>
-                <div class="d-flex flex-wrap justify-content-center gap-2 w-100">
-                    <div class="px-2 py-2 d-flex align-items-center gap-2">
-                        <img src="assets/Logo Maju Perak.png" width="170">
-                    </div>
-                    <div class="px-2 py-2 d-flex align-items-center gap-2">
-                        <img src="assets/Logo SUK.png" width="90">
-                    </div>
-                    <div class="px-2 py-2 d-flex align-items-center gap-2">
-                        <img src="assets/Logo MDK.png" width="90">
-                    </div>
-                    <div class="px-2 py-2 d-flex align-items-center gap-2">
-                        <img src="assets/Logo Gua Tempurung.png" width="170">
-                    </div>
-                    <div class="px-2 py-2 d-flex align-items-center gap-2">
-                        <img src="assets/Logo KBS.png" width="80">
                     </div>
                 </div>
             </div>
 
             <!-- Audience Badge -->
             <div
-                class="d-inline-flex bg-dark border border-warning-subtle text-white rounded-pill px-3 py-2 mb-3 fw-semibold fs-3 fs-xs-5">
-                PERTANDINGAN RAKAN MUDA
+                class="d-inline-flex bg-dark border border-warning-subtle text-white rounded-pill px-3 py-2 fw-semibold fs-5 fs-xs-5">
+                JOM SERTAI MERAKAM KEAJAIBAN GUA TEMPURUNG
             </div>
-
             <!-- Main Title -->
-            <h1 class="display-4 fw-black mb-3 text-white text-uppercase font-heading mt-2">
-                <span class="gradient-text">FOTO MARATON GUA TEMPURUNG 2026</span>
-            </h1>
+            <h1 class="display-6 fw-black mb-3 text-white text-uppercase font-heading mt-2">
 
-            <p class="lead text-white max-width-700 mx-auto mb-4 fs-6">
-                Abadikan keajaiban struktur batu kapur purba, stalaktit bercahaya, dan aksi lensa paling dramatik dalam
-                foto maraton terbesar di Gopeng, Perak!
-            </p>
-            <!-- Ruang Logo Agensi / Rakan Strategik -->
-            <div class="mb-4">
-                <div class="text-capitalize text-secondary small fs-9 mb-2 letter-spacing-1">
-                    Dengan Sokongan
-                </div>
+                <span class="gradient-text">PERTANDINGAN RAKAN MUDA</span>
+            </h1>
+            <div class="d-flex align-items-center gap-3 text-start">
                 <div class="d-flex flex-wrap justify-content-center gap-2 w-100">
                     <div class="px-2 py-2 d-flex align-items-center gap-2">
-                        <img src="assets/Logo Tourism Perak.png" width="150">
-                    </div>
-                    <div class="px-2 py-2 d-flex align-items-center gap-2">
-                        <img src="assets/Logo Wonderful.png" width="150">
-                    </div>
-                    <div class="px-2 py-2 d-flex align-items-center gap-2">
-                        <img src="assets/Logo Paloh Print.png" width="140">
+                        <img src="assets/Logo Foto Maraton Gua Tempurung.png" class="w-75 mx-auto">
                     </div>
                 </div>
             </div>
+            <div>
 
+                <div class="d-flex flex-wrap justify-content-center gap-2 w-100">
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo KPTM.png" width="160">
+                    </div>
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo Maju Perak.png" width="160">
+                    </div>
+                </div>
+            </div>
+            <!-- <p class="lead text-white max-width-700 mx-auto mb-4 fs-6">
+                Abadikan keajaiban struktur batu kapur purba, stalaktit bercahaya, dan aksi lensa paling dramatik dalam
+                foto maraton terbesar di Gopeng, Perak!
+            </p> -->
+            <!-- Ruang Logo Agensi / Rakan Strategik -->
+            <!-- Event Highlight Pills -->
+            <div class="row g-2 d-flex align-items-center justify-content-center mb-2 max-width-900 mx-auto">
+                <div class="text-secondary fs-8 mt-4">Dengan Kerjasama</div>
+                <div class="col-12 d-flex align-items-center">
+                    <div class="d-flex flex-wrap justify-content-center gap-2 w-100">
+                        <div class="px-2 py-2 d-flex align-items-center gap-2">
+                            <img src="assets/Logo MDK.png" width="85">
+                        </div>
+                        <div class="px-2 py-2 d-flex align-items-center gap-2">
+                            <img src="assets/Logo Gua Tempurung.png" width="180">
+                        </div>
+                        <div class="px-2 py-2 d-flex align-items-center gap-2">
+                            <img src="assets/Logo KBS.png" width="80">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Event Highlight Pills -->
             <div class="row g-2 d-flex align-items-center justify-content-center mb-4 max-width-900 mx-auto">
                 <div class="col-12 col-md-4">
@@ -592,105 +167,138 @@
                 <a href="#pengenalan" class="btn btn-outline-light btn-lg px-4 fs-6"><i
                         class="fa-solid fa-circle-info me-1"></i> Maklumat Lanjut</a>
             </div>
-
-            <!-- COUNTDOWN TIMER & PROGRESS CARD -->
-            <div class="custom-card p-4 mx-auto" style="max-width: 750px;">
-                <div class="d-flex justify-content-between align-items-center mb-2 fs-7 fw-bold">
-                    <div class="text-start">
-                        <div class="fw-black lh-1 font-heading text-white fs-6">FOTO MARATON
-                            GUA TEMPURUNG '26</div>
-                        <div class="text-amber fw-bold" style="font-size: 0.65rem; letter-spacing: 0.5px;">GARIS MASA KE
-                            TARIKH MARATON</div>
+            <div>
+                <div class="d-flex flex-wrap justify-content-center gap-2 my-4 w-100">
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo BeYouTiFul Kampar.png" width="100">
                     </div>
-                    <div class="bg-amber text-dark rounded-3 d-flex align-items-center justify-content-center"
-                        style="width: 40px; height: 40px;">
-                        <i class="fa-solid fa-camera fs-5"></i>
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo Malaysia Madani.png" width="200">
                     </div>
-                </div>
-
-                <div class="progress mb-4" style="height: 10px; background-color: rgba(255,255,255,0.1);">
-                    <div class="progress-bar bg-amber progress-bar-striped progress-bar-animated" id="progressBar"
-                        role="progressbar" style="width: 71%;"></div>
-                </div>
-
-                <div class="row g-2 text-center" id="countdownGrid">
-                    <div class="col-3">
-                        <div class="bg-dark bg-opacity-75 border border-secondary border-opacity-50 rounded-3 p-2">
-                            <span class="display-6 fw-bold text-amber d-block font-heading" id="timerDays">00</span>
-                            <span class="text-secondary fs-8 text-uppercase fw-semibold">Hari</span>
-                        </div>
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo Official Perak Sejahtera.png" width="120">
                     </div>
-                    <div class="col-3">
-                        <div class="bg-dark bg-opacity-75 border border-secondary border-opacity-50 rounded-3 p-2">
-                            <span class="display-6 fw-bold text-amber d-block font-heading" id="timerHours">00</span>
-                            <span class="text-secondary fs-8 text-uppercase fw-semibold">Jam</span>
-                        </div>
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo GeoPark Lembah Kinta.png" width="110">
                     </div>
-                    <div class="col-3">
-                        <div class="bg-dark bg-opacity-75 border border-secondary border-opacity-50 rounded-3 p-2">
-                            <span class="display-6 fw-bold text-amber d-block font-heading" id="timerMinutes">00</span>
-                            <span class="text-secondary fs-8 text-uppercase fw-semibold">Minit</span>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="bg-dark bg-opacity-75 border border-secondary border-opacity-50 rounded-3 p-2">
-                            <span class="display-6 fw-bold text-amber d-block font-heading" id="timerSeconds">00</span>
-                            <span class="text-secondary fs-8 text-uppercase fw-semibold">Saat</span>
-                        </div>
+                    <div class="px-2 py-2 d-flex align-items-center gap-2">
+                        <img src="assets/Logo Rasmi NLE30.png" width="220">
                     </div>
                 </div>
-            </div>
-            <div class="mbor-banner rounded-4 p-4 mt-4 mx-auto" style="max-width: 750px;">
-                <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-4 text-center text-md-start">
-                    
-                    <!-- Ready Logo Placeholder with Gold Ornament -->
-                    <div class="flex-shrink-0 mx-auto mx-md-0">
-                        <div class="mbor-logo-ornament">
-                            <!-- Ornamental Accents -->
-                            <i class="fa-solid fa-star mbor-ornament-corner" style="top: -6px;"></i>
-                            <i class="fa-solid fa-star mbor-ornament-corner" style="bottom: -6px;"></i>
-                            <i class="fa-solid fa-diamond mbor-ornament-corner" style="left: -5px; font-size: 0.55rem;"></i>
-                            <i class="fa-solid fa-diamond mbor-ornament-corner" style="right: -5px; font-size: 0.55rem;"></i>
-                            
-                            <!-- Gantikan blok di bawah dengan tag <img> logo rasmi MBOR -->
-                            <div class="text-center">
-                                <div class="fw-black text-white font-heading lh-1" style="font-size: 0.7rem; letter-spacing: 1px;"><img src="assets/Logo MBOR.png" width="140"></div>
+                <!-- COUNTDOWN TIMER & PROGRESS CARD -->
+                <div class="custom-card p-4 mx-auto" style="max-width: 750px;">
+                    <div class="d-flex justify-content-between align-items-center mb-2 fs-7 fw-bold">
+                        <div class="text-start">
+                            <div class="fw-black lh-1 font-heading text-white fs-6">FOTO MARATON
+                                GUA TEMPURUNG '26</div>
+                            <div class="text-amber fw-bold" style="font-size: 0.65rem; letter-spacing: 0.5px;">GARIS
+                                MASA KE
+                                TARIKH MARATON</div>
+                        </div>
+                        <div class="bg-amber text-dark rounded-3 d-flex align-items-center justify-content-center"
+                            style="width: 40px; height: 40px;">
+                            <i class="fa-solid fa-camera fs-5"></i>
+                        </div>
+                    </div>
+
+                    <div class="progress mb-4" style="height: 10px; background-color: rgba(255,255,255,0.1);">
+                        <div class="progress-bar bg-amber progress-bar-striped progress-bar-animated" id="progressBar"
+                            role="progressbar" style="width: 71%;"></div>
+                    </div>
+
+                    <div class="row g-2 text-center" id="countdownGrid">
+                        <div class="col-3">
+                            <div class="bg-dark bg-opacity-75 border border-secondary border-opacity-50 rounded-3 p-2">
+                                <span class="display-6 fw-bold text-amber d-block font-heading" id="timerDays">00</span>
+                                <span class="text-secondary fs-8 text-uppercase fw-semibold">Hari</span>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bg-dark bg-opacity-75 border border-secondary border-opacity-50 rounded-3 p-2">
+                                <span class="display-6 fw-bold text-amber d-block font-heading"
+                                    id="timerHours">00</span>
+                                <span class="text-secondary fs-8 text-uppercase fw-semibold">Jam</span>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bg-dark bg-opacity-75 border border-secondary border-opacity-50 rounded-3 p-2">
+                                <span class="display-6 fw-bold text-amber d-block font-heading"
+                                    id="timerMinutes">00</span>
+                                <span class="text-secondary fs-8 text-uppercase fw-semibold">Minit</span>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bg-dark bg-opacity-75 border border-secondary border-opacity-50 rounded-3 p-2">
+                                <span class="display-6 fw-bold text-amber d-block font-heading"
+                                    id="timerSeconds">00</span>
+                                <span class="text-secondary fs-8 text-uppercase fw-semibold">Saat</span>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="mbor-banner rounded-4 p-4 my-4 mx-auto" style="max-width: 750px;">
+                    <div
+                        class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-4 text-center text-md-start">
 
-                    <!-- Concise Content -->
-                    <div class="flex-grow-1">
-                        <div class="d-inline-flex align-items-center gap-2 text-amber fw-bold fs-8 text-uppercase mb-1">
-                            <i class="fa-solid fa-crown"></i> Pengiktirafan Kebangsaan
+                        <!-- Ready Logo Placeholder with Gold Ornament -->
+                        <div class="flex-shrink-0 mx-auto mx-md-0">
+                            <div class="mbor-logo-ornament">
+                                <!-- Ornamental Accents -->
+                                <i class="fa-solid fa-star mbor-ornament-corner" style="top: -6px;"></i>
+                                <i class="fa-solid fa-star mbor-ornament-corner" style="bottom: -6px;"></i>
+                                <i class="fa-solid fa-diamond mbor-ornament-corner"
+                                    style="left: -5px; font-size: 0.55rem;"></i>
+                                <i class="fa-solid fa-diamond mbor-ornament-corner"
+                                    style="right: -5px; font-size: 0.55rem;"></i>
+
+                                <!-- Gantikan blok di bawah dengan tag <img> logo rasmi MBOR -->
+                                <div class="text-center">
+                                    <div class="fw-black text-white font-heading lh-1"
+                                        style="font-size: 0.7rem; letter-spacing: 1px;"><img src="assets/Logo MBOR.png"
+                                            width="140"></div>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="h4 fw-black text-white font-heading mb-2">
-                            Cubaan Rekod <span class="gradient-text">Malaysia Book of Records (MBOR)</span>
-                        </h3>
-                        <strong class="text-light">"MOST PHOTOGRAPHS CAPTURED IN A PHOTOGRAPHY MARATHON"</strong>
-                        <p class="text-secondary fs-7 mb-2">
-                            Misi mencipta sejarah bersama 300 jurufoto serentak.
-                        </p>
-                        <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
-                            <span class="badge bg-dark border border-warning border-opacity-50 text-amber fw-semibold px-3 py-1 rounded-pill fs-8">
-                                <i class="fa-solid fa-certificate me-1"></i> Sijil Pemegang Rekod Kebangsaan
-                            </span>
-                            <span class="badge bg-dark border border-secondary border-opacity-50 text-light fw-semibold px-3 py-1 rounded-pill fs-8">
-                                <i class="fa-solid fa-users me-1"></i> 300 Lensa Sejarah
-                            </span>
+
+                        <!-- Concise Content -->
+                        <div class="flex-grow-1">
+                            <div
+                                class="d-inline-flex align-items-center gap-2 text-amber fw-bold fs-8 text-uppercase mb-1">
+                                <i class="fa-solid fa-crown"></i> Pengiktirafan Kebangsaan
+                            </div>
+                            <h3 class="h4 fw-black text-white font-heading mb-2">
+                                Cubaan Rekod <span class="gradient-text">Malaysia Book of Records (MBOR)</span>
+                            </h3>
+                            <strong class="text-light">"MOST PHOTOGRAPHS CAPTURED IN A PHOTOGRAPHY MARATHON"</strong>
+                            <p class="text-secondary fs-7 mb-2">
+                                Misi mencipta sejarah bersama 300 jurufoto serentak.
+                            </p>
+                            <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                                <span
+                                    class="badge bg-dark border border-warning border-opacity-50 text-amber fw-semibold px-3 py-1 rounded-pill fs-8">
+                                    <i class="fa-solid fa-certificate me-1"></i> Sijil Pemegang Rekod Kebangsaan
+                                </span>
+                                <span
+                                    class="badge bg-dark border border-secondary border-opacity-50 text-light fw-semibold px-3 py-1 rounded-pill fs-8">
+                                    <i class="fa-solid fa-users me-1"></i> 300 Lensa Sejarah
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex flex-wrap justify-content-center gap-2 mt-4 w-100">
-                <div class="px-2 py-2 d-flex align-items-center gap-2">
-                    <img src="assets/Logo NLE30.png" width="220">
-                </div>
-                <div class="px-2 py-2 d-flex align-items-center gap-2">
-                    <img src="assets/Logo Perak Sejahtera.png" width="120">
-                </div>
-                <div class="px-2 py-2 d-flex align-items-center gap-2">
-                    <img src="assets/Logo Promising Perak.png" width="140">
+                <div>
+                    <div class="text-secondary fs-8">Dengan Sokongan</div>
+                    <div class="d-flex flex-wrap justify-content-center gap-2 w-100">
+                        <div class="px-2 py-2 d-flex align-items-center gap-2">
+                            <img src="assets/Logo Tourism Perak.png" width="140">
+                        </div>
+                        <div class="px-2 py-2 d-flex align-items-center gap-2">
+                            <img src="assets/Logo Wonderful.png" width="140">
+                        </div>
+                        <div class="px-2 py-2 d-flex align-items-center gap-2">
+                            <img src="assets/Logo Paloh Print.png" width="140">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -845,17 +453,19 @@
     <section id="bengkel" class="py-5 bg-dark bg-opacity-50 border-top border-secondary-subtle">
         <div class="container py-4">
             <div class="mb-4">
-                <span class="badge bg-emerald bg-opacity-10 text-dark border border-success-subtle rounded-pill px-3 py-2 fw-bold fs-8">
+                <span
+                    class="badge bg-emerald bg-opacity-10 text-dark border border-success-subtle rounded-pill px-3 py-2 fw-bold fs-8">
                     <i class="fa-solid fa-chalkboard-user me-1"></i> BENGKEL KHAS PELAJAR IPT & SEKOLAH
                 </span>
             </div>
 
             <!-- Main 2-Column Content -->
             <div class="row g-4 g-lg-5 align-items-center">
-                
+
                 <!-- Kolum Poster (1 Slot Poster) -->
                 <div class="col-lg-6">
-                    <div class="workshop-poster-frame mx-auto d-flex flex-column align-items-center justify-content-center text-center p-4">
+                    <div
+                        class="workshop-poster-frame mx-auto d-flex flex-column align-items-center justify-content-center text-center p-4">
                         <img src="assets/Bengkel Fotografi.jpeg" alt="Poster Bengkel Fotografi" class="w-100 rounded-5">
                     </div>
                 </div>
@@ -866,7 +476,9 @@
                         Bengkel Asas & Teknik Fotografi <span class="gradient-text">Pelajar IPT & Sekolah</span>
                     </h2>
                     <p class="text-secondary mb-4">
-                        Persiapkan diri sebelum menyertai foto maraton! Bengkel bimbingan intensif ini dirangka khusus untuk memberi pendedahan praktikal kepada pelajar sekolah menengah, KPTM, dan penuntut IPT dalam menguasai teknik rakaman pencahayaan rendah (<em>low-light</em>) di dalam gua.
+                        Persiapkan diri sebelum menyertai foto maraton! Bengkel bimbingan intensif ini dirangka khusus
+                        untuk memberi pendedahan praktikal kepada pelajar sekolah menengah, KPTM, dan penuntut IPT dalam
+                        menguasai teknik rakaman pencahayaan rendah (<em>low-light</em>) di dalam gua.
                     </p>
 
                     <div class="row g-3 mb-4">
@@ -877,7 +489,8 @@
                                 </div>
                                 <div>
                                     <h6 class="text-white fw-bold mb-1 fs-7">Kumpulan Sasaran</h6>
-                                    <p class="text-secondary fs-8 mb-0">Terbuka kepada pelajar Sekolah Menengah, KPTM & IPTA/IPTS.</p>
+                                    <p class="text-secondary fs-8 mb-0">Terbuka kepada pelajar Sekolah Menengah, KPTM &
+                                        IPTA/IPTS.</p>
                                 </div>
                             </div>
                         </div>
@@ -888,7 +501,8 @@
                                 </div>
                                 <div>
                                     <h6 class="text-white fw-bold mb-1 fs-7">Semua Peranti Diterima</h6>
-                                    <p class="text-secondary fs-8 mb-0">Bimbingan menggunakan Kamera DSLR, Mirrorless & Telefon Pintar.</p>
+                                    <p class="text-secondary fs-8 mb-0">Bimbingan menggunakan Kamera DSLR, Mirrorless &
+                                        Telefon Pintar.</p>
                                 </div>
                             </div>
                         </div>
@@ -899,7 +513,8 @@
                                 </div>
                                 <div>
                                     <h6 class="text-white fw-bold mb-1 fs-7">Modul Praktikal Gua</h6>
-                                    <p class="text-secondary fs-8 mb-0">Kawalan ISO/Shutter, komposisi dramatik & penggunaan lampu suluh.</p>
+                                    <p class="text-secondary fs-8 mb-0">Kawalan ISO/Shutter, komposisi dramatik &
+                                        penggunaan lampu suluh.</p>
                                 </div>
                             </div>
                         </div>
@@ -910,7 +525,8 @@
                                 </div>
                                 <div>
                                     <h6 class="text-white fw-bold mb-1 fs-7">Percuma & Bersijil</h6>
-                                    <p class="text-secondary fs-8 mb-0">Penyertaan bengkel percuma beserta sijil penyertaan Rakan Muda.</p>
+                                    <p class="text-secondary fs-8 mb-0">Penyertaan bengkel percuma beserta sijil
+                                        penyertaan Rakan Muda.</p>
                                 </div>
                             </div>
                         </div>
@@ -918,7 +534,8 @@
 
                     <div class="d-flex flex-wrap align-items-center gap-3">
                         <span class="text-secondary fs-8">
-                            <i class="fa-solid fa-circle-info text-emerald me-1"></i> Tempat terhad mengikut kapasiti peserta pelajar.
+                            <i class="fa-solid fa-circle-info text-emerald me-1"></i> Tempat terhad mengikut kapasiti
+                            peserta pelajar.
                         </span>
                     </div>
                 </div>
@@ -956,7 +573,8 @@
                             <h3 class="h4 font-heading text-white mb-2">Kategori Terbuka</h3>
 
                             <p class="text-secondary fs-7 mb-4">
-                                Terbuka kepada orang terbuka, staf KPTM/IPT, jurufoto amatur berumur 18 tahun ke atas dan
+                                Terbuka kepada orang terbuka, staf KPTM/IPT, jurufoto amatur berumur 18 tahun ke atas
+                                dan
                                 profesional.
                             </p>
                         </div>
@@ -1381,12 +999,12 @@
         </div>
     </section>
 
-
-    <!-- GUIDE SECTION -->
+    <!-- RULES, GUIDE & MAP TABS SECTION (SYARAT | PANDUAN | PETA & CHECKPOINT) -->
     <section id="panduan" class="py-5 gradient-maraton border-top border-bottom border-secondary-subtle">
         <div class="container py-4">
 
-            <div class="text-center mb-5">
+            <!-- Section Header -->
+            <div class="text-center mb-4">
                 <span
                     class="badge bg-amber bg-opacity-10 text-dark border border-warning-subtle rounded-pill px-3 py-2 mb-2 fw-bold fs-8">
                     PANDUAN PERTANDINGAN
@@ -1396,20 +1014,662 @@
                     Panduan & Peraturan Pertandingan
                 </h2>
 
-                <p class="text-secondary mb-0 mx-auto max-width-600">
+                <p class="text-secondary mb-0 mx-auto" style="max-width: 650px;">
                     Pertandingan Rakan Muda Foto Maraton Gua Tempurung 2026.
-                    Fahami syarat penyertaan, peraturan fotografi dan langkah
-                    keselamatan sebelum menyertai pertandingan.
+                    Fahami syarat penyertaan, peraturan fotografi, langkah keselamatan serta peta laluan sebelum
+                    menyertai pertandingan.
                 </p>
             </div>
 
-            <div class="row g-4 align-items-stretch">
+            <!-- Navigation Tabs: Syarat | Panduan | Peta & Checkpoint -->
+            <div class="text-center mb-5">
+                <ul class="nav nav-pills maraton-tab-wrapper" id="panduanTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab-peta-btn" data-bs-toggle="pill"
+                            data-bs-target="#tab-peta" type="button" role="tab" aria-controls="tab-peta"
+                            aria-selected="true">
+                            <i class="fa-solid fa-map-location-dot"></i> Peta & Checkpoint
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-panduan-btn" data-bs-toggle="pill"
+                            data-bs-target="#tab-panduan" type="button" role="tab" aria-controls="tab-panduan"
+                            aria-selected="false">
+                            <i class="fa-solid fa-compass"></i> Panduan
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-syarat-btn" data-bs-toggle="pill" data-bs-target="#tab-syarat"
+                            type="button" role="tab" aria-controls="tab-syarat" aria-selected="false">
+                            <i class="fa-solid fa-file-contract"></i> Syarat
+                        </button>
+                    </li>
 
-                <!-- LEFT COLUMN: RULES -->
-                <div class="col-lg-7">
-                    <div class="custom-card p-4 h-100">
 
-                        <!-- 1. PARTICIPATION -->
+                </ul>
+            </div>
+
+            <!-- Tab Content Panes -->
+            <div class="tab-content mx-auto" id="panduanTabsContent" style="max-width: 1440px;">
+
+                <!-- ========================================== -->
+                <!-- TAB 3: PETA & CHECKPOINT                   -->
+                <!-- ========================================== -->
+                <div class="tab-pane fade show active" id="tab-peta" role="tabpanel" aria-labelledby="tab-peta-btn"
+                    tabindex="0">
+                    <div class="custom-card p-4 p-md-5">
+
+                        <div class="mb-4">
+                            <h4 class="fw-black text-white mb-2 font-heading">
+                                <i class="fa-solid fa-map-location-dot text-amber me-2"></i>
+                                Peta Fotografi & Checkpoint Gua Tempurung
+                            </h4>
+                            <p class="text-secondary fs-7 mb-0">
+                                Rujuk peta pengembaraan di bawah untuk mengenal pasti kawasan, laluan maraton dan titik
+                                checkpoint fotografi yang ditetapkan oleh penganjur.
+                            </p>
+                        </div>
+
+                        <div class="row g-4">
+                            <!-- Peta 1: Fun Map -->
+                            <div class="col-lg-6">
+                                <div
+                                    class="bg-dark bg-opacity-50 border border-secondary border-opacity-50 rounded-4 p-3 h-100 d-flex flex-column">
+                                    <h6 class="fw-black text-white mb-3 font-heading d-flex align-items-center gap-2">
+                                        <span class="badge bg-amber text-dark">PETA 1</span>
+                                        Slot Peserta Berdasarkan Check Point
+                                    </h6>
+                                    <div class="overflow-hidden">
+                                        <!-- JADUAL SLOT CHECKPOINT -->
+                                        <div class="mt-1">
+                                            <div
+                                                class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-3">
+                                                <div>
+                                                    <h4 class="fw-black text-white mb-1 font-heading fs-5">
+                                                        <i class="fa-solid fa-table-cells text-amber me-2"></i>
+                                                        Jadual Slot Checkpoint Mengikut Kumpulan
+                                                    </h4>
+                                                    <p class="text-secondary fs-7 mb-0">
+                                                        Rujuk giliran slot masa (9.00 pagi – 12.00 tengah hari) mengikut
+                                                        kumpulan peserta yang ditetapkan.
+                                                    </p>
+                                                </div>
+
+                                                <!-- Penapis Pantas Kumpulan -->
+                                                <div class="d-flex flex-wrap gap-1" id="slotGroupFilter">
+                                                    <button type="button" class="slot-filter-btn active"
+                                                        data-group="ALL">Semua</button>
+                                                    <button type="button" class="slot-filter-btn"
+                                                        data-group="SEK">SEK</button>
+                                                    <button type="button" class="slot-filter-btn"
+                                                        data-group="IPT1">IPT1</button>
+                                                    <button type="button" class="slot-filter-btn"
+                                                        data-group="IPT2">IPT2</button>
+                                                    <button type="button" class="slot-filter-btn"
+                                                        data-group="IPT3">IPT3</button>
+                                                    <button type="button" class="slot-filter-btn"
+                                                        data-group="IPT4">IPT4</button>
+                                                    <button type="button" class="slot-filter-btn"
+                                                        data-group="IPT5">IPT5</button>
+                                                    <button type="button" class="slot-filter-btn"
+                                                        data-group="TER">TER</button>
+                                                </div>
+                                            </div>
+
+                                            <!-- Jadual Slot Masa -->
+                                            <div
+                                                class="table-responsive rounded-4 border border-secondary border-opacity-50 bg-dark bg-opacity-75 p-2 mb-4">
+                                                <table class="table table-borderless slot-table mb-0"
+                                                    id="checkpointScheduleTable">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 90px;">PESERTA</th>
+                                                            <th>9.00 - 9.30</th>
+                                                            <th>9.30 - 10.00</th>
+                                                            <th>10.00 - 10.30</th>
+                                                            <th>10.30 - 11.00</th>
+                                                            <th>11.00 - 11.30</th>
+                                                            <th>11.30 - 12.00</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr data-group="SEK">
+                                                            <td class="slot-group-cell">SEK</td>
+                                                            <td class="slot-c1">C1</td>
+                                                            <td class="slot-c2">C2</td>
+                                                            <td class="slot-c3">C3</td>
+                                                            <td class="slot-c4">C4</td>
+                                                            <td class="slot-c5">C5</td>
+                                                            <td class="slot-c6">C6</td>
+                                                        </tr>
+                                                        <tr data-group="IPT1">
+                                                            <td class="slot-group-cell">IPT1</td>
+                                                            <td class="slot-p1">P1</td>
+                                                            <td class="slot-p2">P2</td>
+                                                            <td class="slot-c2">C2</td>
+                                                            <td class="slot-c3">C3</td>
+                                                            <td class="slot-c4">C4</td>
+                                                            <td class="slot-c5">C5</td>
+                                                        </tr>
+                                                        <tr data-group="IPT2">
+                                                            <td class="slot-group-cell">IPT2</td>
+                                                            <td class="slot-c5">C5</td>
+                                                            <td class="slot-p1">P1</td>
+                                                            <td class="slot-p2">P2</td>
+                                                            <td class="slot-c2">C2</td>
+                                                            <td class="slot-c3">C3</td>
+                                                            <td class="slot-c4">C4</td>
+                                                        </tr>
+                                                        <tr data-group="IPT3">
+                                                            <td class="slot-group-cell">IPT3</td>
+                                                            <td class="slot-c4">C4</td>
+                                                            <td class="slot-c5">C5</td>
+                                                            <td class="slot-p1">P1</td>
+                                                            <td class="slot-p2">P2</td>
+                                                            <td class="slot-c2">C2</td>
+                                                            <td class="slot-c3">C3</td>
+                                                        </tr>
+                                                        <tr data-group="IPT4">
+                                                            <td class="slot-group-cell">IPT4</td>
+                                                            <td class="slot-c3">C3</td>
+                                                            <td class="slot-c4">C4</td>
+                                                            <td class="slot-c5">C5</td>
+                                                            <td class="slot-p1">P1</td>
+                                                            <td class="slot-p2">P2</td>
+                                                            <td class="slot-c2">C2</td>
+                                                        </tr>
+                                                        <tr data-group="IPT5">
+                                                            <td class="slot-group-cell">IPT5</td>
+                                                            <td class="slot-c2">C2</td>
+                                                            <td class="slot-c3">C3</td>
+                                                            <td class="slot-c4">C4</td>
+                                                            <td class="slot-c5">C5</td>
+                                                            <td class="slot-p1">P1</td>
+                                                            <td class="slot-p2">P2</td>
+                                                        </tr>
+                                                        <tr data-group="TER">
+                                                            <td class="slot-group-cell">TER</td>
+                                                            <td class="slot-p1">P1</td>
+                                                            <td class="slot-p2">P2</td>
+                                                            <td class="slot-p3">P3</td>
+                                                            <td class="slot-p4">P4</td>
+                                                            <td class="slot-ca">C#</td>
+                                                            <td class="slot-ca">C#</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <!-- PETUNJUK KOD (LEGEND) -->
+                                            <div class="row g-3">
+                                                <!-- 1. Kod Kumpulan -->
+                                                <div class="col-md-12">
+                                                    <div
+                                                        class="bg-dark bg-opacity-50 border border-secondary border-opacity-50 rounded-3 p-3 h-100">
+                                                        <h6
+                                                            class="text-amber fw-bold fs-8 text-uppercase mb-3 font-heading">
+                                                            <i class="fa-solid fa-users me-1"></i> Kod Kumpulan Peserta
+                                                        </h6>
+                                                        <ul class="list-unstyled fs-8 mb-0 d-flex flex-column gap-2">
+                                                            <li
+                                                                class="d-flex justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <strong class="text-white">SEK</strong>
+                                                                <span class="text-secondary">Pelajar Sekolah</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <strong class="text-white">IPT1</strong>
+                                                                <span class="text-secondary">Pelajar IPT 1</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <strong class="text-white">IPT2</strong>
+                                                                <span class="text-secondary">Pelajar IPT 2</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <strong class="text-white">IPT3</strong>
+                                                                <span class="text-secondary">Pelajar IPT 3</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <strong class="text-white">IPT4</strong>
+                                                                <span class="text-secondary">Pelajar IPT 4</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <strong class="text-white">IPT5</strong>
+                                                                <span class="text-secondary">Pelajar IPT 5</span>
+                                                            </li>
+                                                            <li class="d-flex justify-content-between">
+                                                                <strong class="text-white">TER</strong>
+                                                                <span class="text-secondary">Peserta Terbuka</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 2. Kod Permulaan & Platform -->
+                                                <div class="col-md-6">
+                                                    <div
+                                                        class="bg-dark bg-opacity-50 border border-secondary border-opacity-50 rounded-3 p-3 h-100">
+                                                        <h6
+                                                            class="text-amber fw-bold fs-8 text-uppercase mb-3 font-heading">
+                                                            <i class="fa-solid fa-layer-group me-1"></i> Kod Platform
+                                                        </h6>
+                                                        <ul class="list-unstyled fs-8 mb-0 d-flex flex-column gap-2">
+                                                            <li
+                                                                class="d-flex align-items-center justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <span
+                                                                    class="badge slot-p1 text-dark fw-bold px-2 py-1">P1</span>
+                                                                <span class="text-light">Platform 1</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex align-items-center justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <span
+                                                                    class="badge slot-p2  text-dark fw-bold px-2 py-1">P2</span>
+                                                                <span class="text-light">Platform 2</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex align-items-center justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <span
+                                                                    class="badge slot-p3  text-dark fw-bold px-2 py-1">P3</span>
+                                                                <span class="text-light">Platform 3</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex align-items-center justify-content-between">
+                                                                <span
+                                                                    class="badge slot-p4  text-dark fw-bold px-2 py-1">P4</span>
+                                                                <span class="text-light">Platform 4</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 3. Kod Checkpoint -->
+                                                <div class="col-md-6">
+                                                    <div
+                                                        class="bg-dark bg-opacity-50 border border-secondary border-opacity-50 rounded-3 p-3 h-100">
+                                                        <h6
+                                                            class="text-amber fw-bold fs-8 text-uppercase mb-3 font-heading">
+                                                            <i class="fa-solid fa-location-crosshairs me-1"></i> Kod
+                                                            Checkpoint
+                                                        </h6>
+                                                        <ul class="list-unstyled fs-8 mb-0 d-flex flex-column gap-2">
+                                                            <li
+                                                                class="d-flex align-items-center justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <span class="badge slot-c1 fw-bold px-2 py-1">C1</span>
+                                                                <span class="text-light">Checkpoint 1</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex align-items-center justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <span
+                                                                    class="badge slot-c2  text-dark fw-bold px-2 py-1">C2</span>
+                                                                <span class="text-light">Checkpoint 2</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex align-items-center justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <span class="badge slot-c3 fw-bold px-2 py-1">C3</span>
+                                                                <span class="text-light">Checkpoint 3</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex align-items-center justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <span
+                                                                    class="badge slot-c4  text-dark fw-bold px-2 py-1">C4</span>
+                                                                <span class="text-light">Checkpoint 4</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex align-items-center justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <span class="badge slot-c5 fw-bold px-2 py-1">C5</span>
+                                                                <span class="text-light">Checkpoint 5</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex align-items-center justify-content-between border-bottom border-secondary border-opacity-25 pb-1">
+                                                                <span class="badge slot-c6 fw-bold px-2 py-1">C6</span>
+                                                                <span class="text-light">Checkpoint 6</span>
+                                                            </li>
+                                                            <li
+                                                                class="d-flex align-items-center justify-content-between">
+                                                                <span
+                                                                    class="badge slot-ca  text-dark fw-bold px-2 py-1">C#</span>
+                                                                <span class="badge slot-red fw-bold px-2 py-1">ANY
+                                                                    CHECKPOINT</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Peta 2: Adventure Map & Checkpoint -->
+                            <div class="col-lg-6">
+                                <div
+                                    class="bg-dark bg-opacity-50 border border-secondary border-opacity-50 rounded-4 p-3 h-100 d-flex flex-column">
+                                    <h6 class="fw-black text-white mb-3 font-heading d-flex align-items-center gap-2">
+                                        <span class="badge bg-amber text-dark">PETA 1</span>
+                                        Peta Kawasan & Laluan Fun Map
+                                    </h6>
+                                    <div class="rounded-3 overflow-hidden border border-secondary bg-dark mt-auto">
+                                        <img src="assets/Gua Tempurung Foto Maraton Fun Map.jpg"
+                                            onerror="this.onerror=null;this.src='https://placehold.co/800x600/131b2e/f59e0b?text=Peta+Kawasan+%26+Fun+Map+Gua+Tempurung';"
+                                            alt="Peta pengembaraan dan titik fotografi Gua Tempurung"
+                                            class="img-fluid w-100 h-auto d-block" loading="lazy">
+                                    </div>
+                                    <h6 class="fw-black text-white my-3 font-heading d-flex align-items-center gap-2">
+                                        <span class="badge bg-emerald text-dark">PETA 2</span>
+                                        Check Point Dalam Gua Tempurung
+                                    </h6>
+                                    <div class="rounded-3 overflow-hidden border border-secondary bg-dark mt-auto">
+                                        <img src="assets/Gua Tempurung Foto Maraton Adventure Map.png"
+                                            onerror="this.onerror=null;this.src='https://placehold.co/800x600/131b2e/10b981?text=Peta+Check+Point+Dalam+Gua+Tempurung';"
+                                            alt="Check Point Dalam Gua Tempurung" class="img-fluid w-100 h-auto d-block"
+                                            loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Safety Map Footnote -->
+                        <div
+                            class="mt-4 p-3 rounded-3 border border-secondary border-opacity-50 bg-dark bg-opacity-75 d-flex align-items-start gap-3">
+                            <i class="fa-solid fa-compass text-amber fs-4 mt-1"></i>
+                            <p class="text-secondary fs-7 mb-0">
+                                Sentiasa ikut laluan yang dibenarkan dan arahan petugas di setiap checkpoint. Peta ini
+                                adalah rujukan lokasi fotografi dan tidak menggantikan arahan keselamatan pihak
+                                pengurusan gua.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- TAB 2: PANDUAN KESELAMATAN, PERALATAN & HANTAR -->
+                <!-- ========================================== -->
+                <div class="tab-pane fade" id="tab-panduan" role="tabpanel" aria-labelledby="tab-panduan-btn"
+                    tabindex="0">
+                    <div class="d-flex flex-column gap-4">
+
+                        <div class="custom-card p-4 p-md-5">
+                            <!-- 1. PERALATAN FOTOGRAFI -->
+                            <div class="mb-4">
+                                <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                    <i class="fa-solid fa-camera-retro text-amber"></i>
+                                    1. Panduan Peralatan Fotografi
+                                </h4>
+
+                                <p class="text-secondary fs-7 mb-3">
+                                    Peserta dibenarkan menggunakan peralatan berikut:
+                                </p>
+
+                                <div class="row g-3">
+                                    <div class="col-6 col-md-3">
+                                        <div
+                                            class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100 text-center">
+                                            <i class="fa-solid fa-camera fs-3 text-amber mb-2 d-block"></i>
+                                            <strong class="d-block fs-7 text-white">DSLR / Mirrorless</strong>
+                                            <small class="text-secondary fs-8">Kamera profesional</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-md-3">
+                                        <div
+                                            class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100 text-center">
+                                            <i class="fa-solid fa-camera-retro fs-3 text-amber mb-2 d-block"></i>
+                                            <strong class="d-block fs-7 text-white">Kamera Digital</strong>
+                                            <small class="text-secondary fs-8">Kamera kompak</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-md-3">
+                                        <div
+                                            class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100 text-center">
+                                            <i
+                                                class="fa-solid fa-mobile-screen-button fs-3 text-amber mb-2 d-block"></i>
+                                            <strong class="d-block fs-7 text-white">Telefon Pintar</strong>
+                                            <small class="text-secondary fs-8">Fotografi mudah alih</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6 col-md-3">
+                                        <div
+                                            class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100 text-center">
+                                            <i
+                                                class="fa-solid fa-triangle-exclamation fs-3 text-danger mb-2 d-block"></i>
+                                            <strong class="d-block fs-7 text-white">Penggunaan Dron</strong>
+                                            <small class="text-secondary fs-8">Perlu kelulusan pihak berkuasa /
+                                                penganjur</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="text-secondary fs-8 mt-3 mb-0">
+                                    <i class="fa-solid fa-circle-info text-amber me-1"></i>
+                                    Tripod, monopod dan aksesori fotografi lain dibenarkan tertakluk kepada peraturan
+                                    keselamatan serta arahan pengurusan Gua Tempurung.
+                                </p>
+                            </div>
+
+                            <hr class="border-secondary opacity-25">
+
+                            <!-- 2. PENGHANTARAN PENYERTAAN -->
+                            <div class="mb-4">
+                                <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                    <i class="fa-solid fa-cloud-arrow-up text-amber"></i>
+                                    2. Panduan Penghantaran Penyertaan
+                                </h4>
+
+                                <ul class="list-unstyled text-secondary fs-7 d-flex flex-column gap-2 mb-0">
+                                    <li class="d-flex gap-2">
+                                        <i class="fa-solid fa-file-image text-amber mt-1"></i>
+                                        <span>Foto akhir hendaklah beresolusi tinggi dalam format
+                                            <strong>JPEG</strong>.</span>
+                                    </li>
+                                    <li class="d-flex gap-2">
+                                        <i class="fa-solid fa-folder-open text-amber mt-1"></i>
+                                        <span>Muat naik foto ke dalam <strong>Google Drive</strong> yang ditetapkan
+                                            mengikut <strong>No. ID Peserta</strong>.</span>
+                                    </li>
+                                    <li class="d-flex gap-2">
+                                        <i class="fa-solid fa-clock text-amber mt-1"></i>
+                                        <span>Penghantaran hendaklah dibuat dalam tempoh yang ditetapkan oleh
+                                            penganjur.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="border-secondary opacity-25">
+
+                            <!-- 3. KESELAMATAN PESERTA -->
+                            <div class="mb-4">
+                                <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                    <i class="fa-solid fa-shield-halved text-amber"></i>
+                                    3. Panduan Keselamatan Peserta
+                                </h4>
+
+                                <div
+                                    class="bg-danger bg-opacity-10 border border-danger border-opacity-25 rounded-3 p-3 mb-3">
+                                    <strong class="text-white">
+                                        <i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>
+                                        Keselamatan ialah keutamaan.
+                                    </strong>
+                                    <p class="text-secondary fs-7 mt-2 mb-0">
+                                        Jangan mengambil risiko atau memasuki kawasan berbahaya semata-mata untuk
+                                        mendapatkan foto.
+                                    </p>
+                                </div>
+
+                                <ul class="list-unstyled text-secondary fs-7 d-flex flex-column gap-2 mb-0">
+                                    <li class="d-flex gap-2">
+                                        <i class="fa-solid fa-check text-amber mt-1"></i>
+                                        <span>Patuhi arahan penganjur dan pengurusan Gua Tempurung pada setiap
+                                            masa.</span>
+                                    </li>
+                                    <li class="d-flex gap-2">
+                                        <i class="fa-solid fa-check text-amber mt-1"></i>
+                                        <span>Gunakan laluan yang ditetapkan dan jangan memasuki kawasan
+                                            larangan.</span>
+                                    </li>
+                                    <li class="d-flex gap-2">
+                                        <i class="fa-solid fa-check text-amber mt-1"></i>
+                                        <span>Pakai pakaian dan kasut yang sesuai serta mempunyai cengkaman yang
+                                            baik.</span>
+                                    </li>
+                                    <li class="d-flex gap-2">
+                                        <i class="fa-solid fa-check text-amber mt-1"></i>
+                                        <span>Jangan merosakkan batu, flora, fauna atau struktur gua dan jangan
+                                            mengganggu hidupan liar.</span>
+                                    </li>
+                                    <li class="d-flex gap-2">
+                                        <i class="fa-solid fa-check text-amber mt-1"></i>
+                                        <span>Peserta bertanggungjawab menjaga keselamatan peralatan fotografi
+                                            masing-masing.</span>
+                                    </li>
+                                </ul>
+
+                                <p class="text-danger fw-bold fs-7 mt-3 mb-0">
+                                    Penganjur berhak menghentikan penyertaan peserta yang melanggar peraturan
+                                    keselamatan.
+                                </p>
+                            </div>
+
+                            <hr class="border-secondary opacity-25">
+
+                            <!-- 4. ETIKA FOTOGRAFI -->
+                            <div>
+                                <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
+                                    <i class="fa-solid fa-leaf text-amber"></i>
+                                    4. Etika Fotografi
+                                </h4>
+
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <div
+                                            class="d-flex align-items-start gap-3 bg-dark bg-opacity-50 rounded-3 p-3 h-100">
+                                            <i class="fa-solid fa-tree text-success fs-5 mt-1"></i>
+                                            <div>
+                                                <strong class="text-white d-block fs-7">Lindungi Alam</strong>
+                                                <small class="text-secondary">Jangan merosakkan alam atau mengganggu
+                                                    flora dan fauna demi mendapatkan gambar.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div
+                                            class="d-flex align-items-start gap-3 bg-dark bg-opacity-50 rounded-3 p-3 h-100">
+                                            <i class="fa-solid fa-people-group text-amber fs-5 mt-1"></i>
+                                            <div>
+                                                <strong class="text-white d-block fs-7">Hormati Orang Lain</strong>
+                                                <small class="text-secondary">Hormati privasi pengunjung, peserta dan
+                                                    petugas sepanjang pertandingan.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div
+                                            class="d-flex align-items-start gap-3 bg-dark bg-opacity-50 rounded-3 p-3 h-100">
+                                            <i class="fa-solid fa-person-walking text-info fs-5 mt-1"></i>
+                                            <div>
+                                                <strong class="text-white d-block fs-7">Jaga Laluan</strong>
+                                                <small class="text-secondary">Jangan menghalang laluan atau membahayakan
+                                                    orang lain ketika mengambil foto.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SENARAI SEMAK PESERTA -->
+                        <div class="custom-card p-4 p-md-5">
+                            <h4 class="fw-black text-white mb-2 font-heading fs-5">
+                                <i class="fa-solid fa-list-check text-amber me-2"></i>
+                                Senarai Semak Peserta
+                            </h4>
+
+                            <p class="text-secondary fs-7 mb-4">
+                                Pastikan semua persediaan dan dokumen yang diperlukan telah lengkap sebelum menyertai
+                                Foto Maraton.
+                            </p>
+
+                            <div class="row g-3 text-center">
+                                <div class="col-6 col-md-4">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-id-card fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">No. ID Peserta</strong>
+                                        <small class="text-secondary fs-8">Daftar awal dan terima pada hari
+                                            pertandingan.</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-4">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-file-signature fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Borang Keizinan</strong>
+                                        <small class="text-secondary fs-8">Baca, fahami dan berikan persetujuan.</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-4">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-camera fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Peralatan Kamera</strong>
+                                        <small class="text-secondary fs-8">Periksa bateri penuh dan kad storan
+                                            mencukupi.</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-4">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-shoe-prints fs-3 text-emerald mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Kasut Sesuai</strong>
+                                        <small class="text-secondary fs-8">Kasut bertutup dengan cengkaman yang
+                                            baik.</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-4">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-shirt fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Pakaian Sesuai</strong>
+                                        <small class="text-secondary fs-8">Selesa, ringan dan selamat untuk aktiviti
+                                            gua.</small>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-4">
+                                    <div
+                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
+                                        <i class="fa-solid fa-cloud-arrow-up fs-3 text-amber mb-2 d-block"></i>
+                                        <strong class="d-block fs-7 text-white">Penghantaran Foto</strong>
+                                        <small class="text-secondary fs-8">Muat naik fail JPEG ke Google Drive mengikut
+                                            masa ditetapkan.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ========================================== -->
+                <!-- TAB 1: SYARAT PERTANDINGAN                 -->
+                <!-- ========================================== -->
+                <div class="tab-pane fade" id="tab-syarat" role="tabpanel" aria-labelledby="tab-syarat-btn"
+                    tabindex="0">
+                    <div class="custom-card p-4 p-md-5">
+
+                        <!-- 1. SYARAT PENYERTAAN -->
                         <div class="mb-4">
                             <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
                                 <i class="fa-solid fa-users text-amber"></i>
@@ -1428,7 +1688,8 @@
                                 </li>
                                 <li class="d-flex gap-2">
                                     <i class="fa-solid fa-check text-amber mt-1"></i>
-                                    <span>Peserta wajib mendaftar lebih awal untuk mendapatkan No. ID Peserta semasa hari pertandingan</span>
+                                    <span>Peserta wajib mendaftar lebih awal untuk mendapatkan No. ID Peserta semasa
+                                        hari pertandingan.</span>
                                 </li>
                                 <li class="d-flex gap-2">
                                     <i class="fa-solid fa-check text-amber mt-1"></i>
@@ -1451,7 +1712,7 @@
 
                         <hr class="border-secondary opacity-25">
 
-                        <!-- 2. PHOTO MARATHON -->
+                        <!-- 2. KONSEP & TEMA FOTOGRAFI -->
                         <div class="mb-4">
                             <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
                                 <i class="fa-solid fa-camera text-amber"></i>
@@ -1490,70 +1751,11 @@
 
                         <hr class="border-secondary opacity-25">
 
-                        <!-- 3. EQUIPMENT -->
-                        <div class="mb-4">
-                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
-                                <i class="fa-solid fa-camera-retro text-amber"></i>
-                                3. Peralatan Fotografi
-                            </h4>
-
-                            <p class="text-secondary fs-7 mb-3">
-                                Peserta dibenarkan menggunakan peralatan berikut:
-                            </p>
-
-                            <div class="row g-2">
-                                <div class="col-6">
-                                    <div
-                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
-                                        <i class="fa-solid fa-camera fs-3 text-amber mb-2 d-block"></i>
-                                        <strong class="d-block fs-7 text-white">DSLR / Mirrorless</strong>
-                                        <small class="text-secondary fs-8">Kamera profesional</small>
-                                    </div>
-                                </div>
-
-                                <div class="col-6">
-                                    <div
-                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
-                                        <i class="fa-solid fa-camera-retro fs-3 text-amber mb-2 d-block"></i>
-                                        <strong class="d-block fs-7 text-white">Kamera Digital</strong>
-                                        <small class="text-secondary fs-8">Kamera kompak</small>
-                                    </div>
-                                </div>
-
-                                <div class="col-6">
-                                    <div
-                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
-                                        <i class="fa-solid fa-mobile-screen-button fs-3 text-amber mb-2 d-block"></i>
-                                        <strong class="d-block fs-7 text-white">Telefon Pintar</strong>
-                                        <small class="text-secondary fs-8">Fotografi mudah alih</small>
-                                    </div>
-                                </div>
-
-                                <div class="col-6">
-                                    <div
-                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
-                                        <i class="fa-solid fa-triangle-exclamation fs-3 text-danger mb-2 d-block"></i>
-                                        <strong class="d-block fs-7 text-white">Penggunaan Dron</strong>
-                                        <small class="text-secondary fs-8">Perlu kelulusan pihak berkuasa /
-                                            penganjur</small>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p class="text-secondary fs-8 mt-3 mb-0">
-                                Tripod, monopod dan aksesori fotografi lain dibenarkan
-                                tertakluk kepada peraturan keselamatan serta arahan
-                                pengurusan Gua Tempurung.
-                            </p>
-                        </div>
-
-                        <hr class="border-secondary opacity-25">
-
-                        <!-- 4. PHOTO EDITING -->
+                        <!-- 3. PENGUBAHSUAIAN FOTO -->
                         <div class="mb-4">
                             <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
                                 <i class="fa-solid fa-sliders text-amber"></i>
-                                4. Pengubahsuaian Foto
+                                3. Syarat Pengubahsuaian Foto
                             </h4>
 
                             <div class="row g-3">
@@ -1597,136 +1799,11 @@
 
                         <hr class="border-secondary opacity-25">
 
-                        <!-- 5. SUBMISSION -->
-                        <div class="mb-4">
-                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
-                                <i class="fa-solid fa-cloud-arrow-up text-amber"></i>
-                                5. Penghantaran Penyertaan
-                            </h4>
-
-                            <ul class="list-unstyled text-secondary fs-7 d-flex flex-column gap-2 mb-0">
-                                <li class="d-flex gap-2">
-                                    <i class="fa-solid fa-file-image text-amber mt-1"></i>
-                                    <span>Foto akhir hendaklah beresolusi tinggi dalam format JPEG.</span>
-                                </li>
-                                <li class="d-flex gap-2">
-                                    <i class="fa-solid fa-folder-open text-amber mt-1"></i>
-                                    <span>Muat naik foto ke dalam Google Drive yang ditetapkan mengikut No. ID
-                                        Peserta.</span>
-                                </li>
-                                <li class="d-flex gap-2">
-                                    <i class="fa-solid fa-clock text-amber mt-1"></i>
-                                    <span>Penghantaran hendaklah dibuat dalam tempoh yang ditetapkan oleh
-                                        penganjur.</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <hr class="border-secondary opacity-25">
-
-                        <!-- 6. SAFETY -->
-                        <div class="mb-4">
-                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
-                                <i class="fa-solid fa-shield-halved text-amber"></i>
-                                6. Keselamatan Peserta
-                            </h4>
-
-                            <div
-                                class="bg-danger bg-opacity-10 border border-danger border-opacity-25 rounded-3 p-3 mb-3">
-                                <strong class="text-white">
-                                    <i class="fa-solid fa-triangle-exclamation text-danger me-2"></i>
-                                    Keselamatan ialah keutamaan.
-                                </strong>
-                                <p class="text-secondary fs-7 mt-2 mb-0">
-                                    Jangan mengambil risiko atau memasuki kawasan
-                                    berbahaya semata-mata untuk mendapatkan foto.
-                                </p>
-                            </div>
-
-                            <ul class="list-unstyled text-secondary fs-7 d-flex flex-column gap-2 mb-0">
-                                <li class="d-flex gap-2">
-                                    <i class="fa-solid fa-check text-amber mt-1"></i>
-                                    <span>Patuhi arahan penganjur dan pengurusan Gua Tempurung pada setiap masa.</span>
-                                </li>
-                                <li class="d-flex gap-2">
-                                    <i class="fa-solid fa-check text-amber mt-1"></i>
-                                    <span>Gunakan laluan yang ditetapkan dan jangan memasuki kawasan larangan.</span>
-                                </li>
-                                <li class="d-flex gap-2">
-                                    <i class="fa-solid fa-check text-amber mt-1"></i>
-                                    <span>Pakai pakaian dan kasut yang sesuai serta mempunyai cengkaman yang
-                                        baik.</span>
-                                </li>
-                                <li class="d-flex gap-2">
-                                    <i class="fa-solid fa-check text-amber mt-1"></i>
-                                    <span>Jangan merosakkan batu, flora, fauna atau struktur gua dan jangan mengganggu
-                                        hidupan liar.</span>
-                                </li>
-                                <li class="d-flex gap-2">
-                                    <i class="fa-solid fa-check text-amber mt-1"></i>
-                                    <span>Peserta bertanggungjawab menjaga keselamatan peralatan fotografi
-                                        masing-masing.</span>
-                                </li>
-                            </ul>
-
-                            <p class="text-danger fw-bold fs-7 mt-3 mb-0">
-                                Penganjur berhak menghentikan penyertaan peserta
-                                yang melanggar peraturan keselamatan.
-                            </p>
-                        </div>
-
-                        <hr class="border-secondary opacity-25">
-
-                        <!-- 7. PHOTOGRAPHY ETHICS -->
-                        <div class="mb-4">
-                            <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
-                                <i class="fa-solid fa-leaf text-amber"></i>
-                                7. Etika Fotografi
-                            </h4>
-
-                            <div class="row g-2">
-                                <div class="col-12">
-                                    <div class="d-flex align-items-start gap-3 bg-dark bg-opacity-50 rounded-3 p-3">
-                                        <i class="fa-solid fa-tree text-success fs-5 mt-1"></i>
-                                        <div>
-                                            <strong class="text-white d-block fs-7">Lindungi Alam</strong>
-                                            <small class="text-secondary">Jangan merosakkan alam atau mengganggu flora
-                                                dan fauna demi mendapatkan gambar.</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="d-flex align-items-start gap-3 bg-dark bg-opacity-50 rounded-3 p-3">
-                                        <i class="fa-solid fa-people-group text-amber fs-5 mt-1"></i>
-                                        <div>
-                                            <strong class="text-white d-block fs-7">Hormati Orang Lain</strong>
-                                            <small class="text-secondary">Hormati privasi pengunjung, peserta dan
-                                                petugas sepanjang pertandingan.</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="d-flex align-items-start gap-3 bg-dark bg-opacity-50 rounded-3 p-3">
-                                        <i class="fa-solid fa-person-walking text-info fs-5 mt-1"></i>
-                                        <div>
-                                            <strong class="text-white d-block fs-7">Jaga Laluan</strong>
-                                            <small class="text-secondary">Jangan menghalang laluan atau membahayakan
-                                                orang lain ketika mengambil foto.</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <hr class="border-secondary opacity-25">
-
-                        <!-- 8. ORGANISER RIGHTS -->
+                        <!-- 4. HAK PENGANJUR -->
                         <div class="mb-4">
                             <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
                                 <i class="fa-solid fa-scale-balanced text-amber"></i>
-                                8. Hak Penganjur
+                                4. Hak Penganjur
                             </h4>
 
                             <ul class="list-unstyled text-secondary fs-7 d-flex flex-column gap-2 mb-0">
@@ -1755,11 +1832,11 @@
 
                         <hr class="border-secondary opacity-25">
 
-                        <!-- 9. DISQUALIFICATION -->
+                        <!-- 5. PEMBATALAN PENYERTAAN -->
                         <div>
                             <h4 class="font-heading text-white mb-3 d-flex align-items-center gap-2 fs-5">
                                 <i class="fa-solid fa-ban text-danger"></i>
-                                9. Pembatalan Penyertaan
+                                5. Pembatalan Penyertaan
                             </h4>
 
                             <p class="text-secondary fs-7 mb-3">
@@ -1793,167 +1870,26 @@
 
                         <!-- FINAL REMINDER -->
                         <div class="mt-4 p-3 rounded-3 border border-warning-subtle bg-amber bg-opacity-10">
-                            <p class="text-white fw-bold mb-1">
-                                <i class="fa-solid fa-circle-info text-dark me-2"></i>
+                            <p class="text-dark fw-bold mb-1">
+                                <i class="fa-solid fa-circle-info me-2"></i>
                                 Peringatan kepada semua peserta
                             </p>
-                            <p class="text-secondary fs-7 mb-0 text-dark">
+                            <p class="text-light fs-7 mb-0">
                                 Pastikan anda telah mendaftar bagi mendapatkan No. ID Peserta pada hari pertandingan
-                                dan memahami semua peraturan sebelum memulakan
-                                pengembaraan fotografi anda.
+                                dan memahami semua syarat sebelum memulakan pengembaraan fotografi anda.
                             </p>
                         </div>
 
                     </div>
                 </div>
 
-                <!-- RIGHT COLUMN: MAP & CHECKLIST -->
-                <div class="col-lg-5">
-                    <div class="d-flex flex-column gap-4 h-100">
-
-                        <!-- ADVENTURE MAP -->
-                        <div class="custom-card p-4">
-                            <h4 class="fw-black text-white mb-2 font-heading">
-                                <i class="fa-solid fa-map-location-dot text-amber me-2"></i>
-                                Peta Fotografi Gua Tempurung
-                            </h4>
-
-                            <p class="text-secondary fs-7 mb-3">
-                                Rujuk peta pengembaraan untuk mengenal pasti kawasan
-                                dan titik fotografi yang ditetapkan oleh penganjur.
-                            </p>
-                            <div class="gallery-card border border-secondary rounded-3 overflow-hidden mb-3">
-                                <img src="assets/Gua Tempurung Foto Maraton Fun Map.jpg"
-                                    alt="Peta pengembaraan dan titik fotografi Gua Tempurung" class="img-fluid w-100"
-                                    loading="lazy">
-                            </div>
-                            <h6 class="fw-black text-white mb-2 font-heading">
-                                <i class="fa-solid fa-map-pin text-amber me-2"></i>
-                                Check Point Dalam Gua Tempurung
-                            </h6>
-                            <div class="gallery-card border border-secondary rounded-3 overflow-hidden">
-                                <img src="assets/Gua Tempurung Foto Maraton Adventure Map.png"
-                                    alt="Peta pengembaraan dan titik fotografi Gua Tempurung" class="img-fluid w-100"
-                                    loading="lazy">
-                            </div>
-
-                            <p class="text-secondary fs-8 mt-3 mb-0">
-                                Sentiasa ikut laluan yang dibenarkan dan arahan
-                                petugas. Peta ini tidak menggantikan arahan
-                                keselamatan pihak pengurusan gua.
-                            </p>
-                        </div>
 
 
-                        <!-- PREPARATION CHECKLIST -->
-                        <div class="custom-card p-4 flex-grow-1">
-                            <h4 class="fw-black text-white mb-2 font-heading">
-                                <i class="fa-solid fa-list-check text-amber me-2"></i>
-                                Senarai Semak Peserta
-                            </h4>
 
-                            <p class="text-secondary fs-7 mb-4">
-                                Pastikan semua persediaan dan dokumen yang diperlukan telah lengkap
-                                sebelum menyertai Foto Maraton.
-                            </p>
-
-                            <div class="row g-3 text-center">
-
-                                <div class="col-6">
-                                    <div
-                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
-                                        <i class="fa-solid fa-id-card fs-3 text-amber mb-2 d-block"></i>
-                                        <strong class="d-block fs-7 text-white">No. ID Peserta</strong>
-                                        <small class="text-secondary fs-8">Daftar awal dan terima pada hari pertandingan.</small>
-                                    </div>
-                                </div>
-
-                                <div class="col-6">
-                                    <div
-                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
-                                        <i class="fa-solid fa-file-signature fs-3 text-amber mb-2 d-block"></i>
-                                        <strong class="d-block fs-7 text-white">Borang Keizinan</strong>
-                                        <small class="text-secondary fs-8">Baca, fahami dan berikan persetujuan</small>
-                                    </div>
-                                </div>
-
-                                <div class="col-6">
-                                    <div
-                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
-                                        <i class="fa-solid fa-camera fs-3 text-amber mb-2 d-block"></i>
-                                        <strong class="d-block fs-7 text-white">Peralatan Kamera</strong>
-                                        <small class="text-secondary fs-8">Periksa bateri dan storan</small>
-                                    </div>
-                                </div>
-
-                                <div class="col-6">
-                                    <div
-                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
-                                        <i class="fa-solid fa-shoe-prints fs-3 text-emerald mb-2 d-block"></i>
-                                        <strong class="d-block fs-7 text-white">Kasut Sesuai</strong>
-                                        <small class="text-secondary fs-8">Cengkaman yang baik</small>
-                                    </div>
-                                </div>
-
-                                <div class="col-6">
-                                    <div
-                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
-                                        <i class="fa-solid fa-shirt fs-3 text-amber mb-2 d-block"></i>
-                                        <strong class="d-block fs-7 text-white">Pakaian Sesuai</strong>
-                                        <small class="text-secondary fs-8">Selesa dan selamat</small>
-                                    </div>
-                                </div>
-
-                                <div class="col-6">
-                                    <div
-                                        class="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-25 h-100">
-                                        <i class="fa-solid fa-cloud-arrow-up fs-3 text-amber mb-2 d-block"></i>
-                                        <strong class="d-block fs-7 text-white">Penghantaran Foto</strong>
-                                        <small class="text-secondary fs-8">JPEG melalui Drive</small>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- CONSENT REMINDER -->
-                            <div class="mt-4 p-3 rounded-3 border border-warning-subtle bg-amber bg-opacity-10">
-                                <p class="text-white fw-bold fs-7 mb-2">
-                                    <i class="fa-solid fa-file-circle-check text-dark me-2"></i>
-                                    Pengesahan Keizinan
-                                </p>
-
-                                <p class="text-secondary fs-7 mb-0 text-dark">
-                                    Semua peserta hendaklah membaca dan memahami terma serta syarat
-                                    pertandingan, termasuk peraturan keselamatan, penggunaan foto
-                                    untuk tujuan publisiti dan pengendalian data peribadi.
-                                    Peserta bawah 18 tahun hendaklah mendapatkan keizinan
-                                    ibu bapa atau penjaga mengikut ketetapan penganjur.
-                                </p>
-                            </div>
-    
-                            <div
-                                class="mt-3 p-3 rounded-3 bg-dark bg-opacity-50 border border-secondary border-opacity-25">
-                                <p class="text-white fw-bold fs-7 mb-2">
-                                    <i class="fa-solid fa-lightbulb text-amber me-2"></i>
-                                    Ingat!
-                                </p>
-
-                                <p class="text-secondary fs-7 mb-0">
-                                    Hasilkan foto yang kreatif dan asli. Utamakan keselamatan,
-                                    hargai alam semula jadi dan patuhi semua arahan pertandingan.
-                                </p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
 
             </div>
         </div>
     </section>
-
-
 
     <!-- REGISTRATION STRUCTURE SECTION -->
     <section id="pendaftaran" class="py-5 border-top border-bottom border-secondary-subtle">
@@ -2090,7 +2026,7 @@
                 </div>
 
             </div>
-             
+
             <!-- Registration Reminder -->
             <div class="mt-5 p-4 rounded-4 border border-warning-subtle bg-dark bg-opacity-10 text-center">
                 <i class="fa-solid fa-circle-info text-white fs-3 mb-2"></i>
@@ -2104,9 +2040,10 @@
                     maklumat pendaftaran dan membaca syarat serta peraturan
                     Pertandingan Rakan Muda Foto Maraton Gua Tempurung 2026.
                 </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScKhqMwZUs38jqJkUpuL39E50V09x033CfKS1Yy3Hz8p7rl-Q/viewform?usp=dialog" target="_blank" class="btn btn-amber gradient-maraton px-5 py-3 mt-4 rounded-3 fs-5 w-100">
-                <i class="fa-solid fa-pen-to-square me-1"></i> Daftar Pertandingan Foto Maraton Gua Tempurung
-            </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScKhqMwZUs38jqJkUpuL39E50V09x033CfKS1Yy3Hz8p7rl-Q/viewform?usp=dialog"
+                    target="_blank" class="btn btn-amber gradient-maraton px-5 py-3 mt-4 rounded-3 fs-5 w-100">
+                    <i class="fa-solid fa-pen-to-square me-1"></i> Daftar Pertandingan Foto Maraton Gua Tempurung
+                </a>
             </div>
 
         </div>
@@ -2390,6 +2327,21 @@
             const percent = Math.round(((365 - count) / 365) * 100);
             $('#progressBar').css('width', percent + '%');
 
+
+            // Checkpoint Slot Group Filter Logic
+            $('#slotGroupFilter .slot-filter-btn').on('click', function () {
+                const selectedGroup = $(this).data('group');
+
+                $('#slotGroupFilter .slot-filter-btn').removeClass('active');
+                $(this).addClass('active');
+
+                if (selectedGroup === 'ALL') {
+                    $('#checkpointScheduleTable tbody tr').show();
+                } else {
+                    $('#checkpointScheduleTable tbody tr').hide();
+                    $('#checkpointScheduleTable tbody tr[data-group="' + selectedGroup + '"]').fadeIn(200);
+                }
+            });
         });
     </script>
 </body>
